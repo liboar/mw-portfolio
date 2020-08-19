@@ -1,0 +1,165 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap");
+html,
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+=============== 
+Header and Navbar
+===============
+*/
+
+.navbar {
+  padding-top: 0;
+  position: fixed;
+  z-index: 5;
+  background-color: white;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li a {
+  line-height: 2rem;
+  font-size: 1.2rem;
+  margin: auto 1rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 800;
+  font-family: sans-serif;
+  color: #181818;
+}
+
+.navbar li a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+label {
+  font-size: 2rem;
+  display: none;
+  width: 2rem;
+  float: right;
+}
+
+#toggle {
+  display: none;
+}
+
+.isCurrent {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  label {
+    display: block;
+    z-index: 10;
+    position: fixed;
+    cursor: pointer;
+    margin: 1rem;
+    color: #ff0000d8;
+    background: #181818;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1rem;
+    padding: 1rem;
+
+    border-radius: 50%;
+  }
+
+  #toggle:checked + .menu {
+    display: block;
+  }
+}
+
+/*
+=============== 
+Title
+===============
+*/
+
+.site-title {
+  max-width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.site-title .h1 {
+  font-size: 8rem;
+  color: #ff0000d8;
+  letter-spacing: 1rem;
+  text-shadow: 2px 2px #525252;
+}
+
+.site-title .h2 {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  text-shadow: 2px 2px 8px #525252;
+}
+
+@media (max-width: 768px) {
+  .site-title {
+    padding: 0 0.5rem 3rem;
+    align-self: end;
+  }
+
+  .site-title .h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.5rem;
+  }
+  .site-title .h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+    color: black;
+    text-shadow: 2px 2px 8px #f1f1f1;
+    font-family: "Playfair Display", serif;
+  }
+}
+/*
+=============== 
+Hero Section
+===============
+*/
+
+.hero {
+  display: flex;
+  justify-content: center;
+}

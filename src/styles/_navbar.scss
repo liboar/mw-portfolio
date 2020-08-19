@@ -1,0 +1,24 @@
+.navbar {
+  background-color: white;
+}
+
+.nav {
+  max-width: 500px;
+  display: flex;
+}
+
+.navlink {
+  color: $dark-text;
+  font-weight: 600;
+}
+
+.isCurrent {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: $dark-text;
+}
