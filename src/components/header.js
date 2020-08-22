@@ -1,10 +1,20 @@
-import PropTypes from "prop-types"
 import React, { useState } from "react"
-import { Collapse, Navbar, NavbarToggler, NavItem } from "reactstrap"
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavItem,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Nav,
+} from "reactstrap"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
+import { FaLanguage } from "react-icons/fa"
 
-const Header = (props, { styleClass }) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
@@ -15,11 +25,10 @@ const Header = (props, { styleClass }) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Scrollspy
-            className={`Scrollspy`}
+            className={`Scrollspy container nav mr-auto`}
             items={["hero", "work", "gallery", "shop", "contact"]}
             currentClassName="isCurrent"
             offset={-100}
-            className="container nav mr-auto"
             navbar
           >
             <NavItem>
@@ -29,7 +38,7 @@ const Header = (props, { styleClass }) => {
             </NavItem>
             <NavItem>
               <AnchorLink href="#work" className="navlink">
-                Work
+                About
               </AnchorLink>
             </NavItem>
             <NavItem>
@@ -49,17 +58,23 @@ const Header = (props, { styleClass }) => {
             </NavItem>
           </Scrollspy>
         </Collapse>
+        <Nav>
+          <NavItem>
+            <UncontrolledDropdown>
+              <DropdownToggle nav caret className="navlink">
+                <FaLanguage style={{ fontSize: "3rem" }} />
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>English</DropdownItem>
+                <DropdownItem>German</DropdownItem>
+                <DropdownItem>Russian</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </NavItem>
+        </Nav>
       </Navbar>
     </>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header

@@ -1,0 +1,55 @@
+.workCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $bright-bg;
+  border: 0;
+  font-family: monospace;
+  color: $dark-bg;
+  font-weight: 100;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.cardBody {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.2);
+  font-size: 1.8rem;
+  text-align: right;
+}
+
+// .card-img {
+//   background-color: white;
+//   border-radius: 50%;
+//   box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.2);
+// }
+
+span {
+  color: $hero-color;
+}
+
+.workButton {
+  background-color: $hero-color;
+  border: 0;
+  font-family: $site-font;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 563px) {
+  .workCard {
+    margin: 1.5rem auto;
+  }
+  .cardBody {
+    padding: 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .card-img {
+    display: none;
+  }
+  .workButton {
+    font-size: smaller;
+  }
+}

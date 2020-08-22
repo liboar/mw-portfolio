@@ -1,20 +1,38 @@
 .titles {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-self: center;
   text-align: center;
   font-family: $hero-font;
   height: 100%;
 }
 
+.titles a:hover {
+  text-decoration: none !important;
+}
+
 .subtitle {
   color: white;
-  text-shadow: 4px 4px 8px $dark-text;
+  text-shadow: 4px 4px 12px $dark-text;
 }
 
 .title {
   color: $hero-color;
   text-shadow: 4px 4px 8px $dark-text;
   font-weight: 700;
+}
+
+@media screen and (min-width: 1025px) {
+  .titles {
+    justify-content: stretch;
+  }
+  .title {
+    letter-spacing: 0.5rem;
+    font-size: 5rem;
+  }
+  .subtitle {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+  }
 }

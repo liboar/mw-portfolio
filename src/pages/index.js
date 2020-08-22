@@ -1,19 +1,25 @@
 import React from "react"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { graphql } from "gatsby"
 
 /* COMPONENTS */
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Hero from "../components/hero"
 import Work from "../components/work"
+import Gallery from "../components/Gallery"
+import Shop from "../components/Shop"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `photography`, `ikhmalian`]} />
-    <Hero />
-    <Work />
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="Home" keywords={[`gatsby`, `photography`, `ikhmalian`]} />
+      <Hero />
+      <Work />
+      <Gallery />
+      <Shop />
+    </Layout>
+  )
+}
 
 export const query = graphql`
   {

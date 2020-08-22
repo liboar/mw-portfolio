@@ -4,14 +4,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tinos&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap");
 
 /* SANS SERIF */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Changa+One&display=swap");
 
 /* VARIABLES */
+
+/* FONTS */
 $hero-font: "Prata", serif;
 $site-font: "Raleway", sans-serif;
+$work-font: "Roboto Slab", serif;
+$nav-font: "Changa One";
+/* COLORS */
 $bright-bg: #f5f0ed;
-$dark-bg: #1a1a1a;
-$dark-text: rgb(8, 8, 8);
+$dark-bg: #242424;
+$dark-text: #242323;
 $hero-color: #ff0000;

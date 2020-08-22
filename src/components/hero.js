@@ -21,8 +21,10 @@ const hero = ({ className }) => (
         <BackgroundImage className={className} fluid={imageData}>
           <section className="section" id="hero">
             <div className="container titles mr-auto">
-              <h1 className="title  display-4">Marianna Ikhmalian</h1>
-              <h3 className="subtitle">Analog Photography</h3>
+              <a href="/">
+                <h1 className="title display-4">Marianna Ikhmalian</h1>
+                <h3 className="subtitle">Analog Photography</h3>
+              </a>
             </div>
           </section>
         </BackgroundImage>
