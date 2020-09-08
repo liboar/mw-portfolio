@@ -1,25 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `Marianna Photography`,
-    description: `description`,
+    title: `Ikhmalian Photography`,
+    description: `A portfolio website for analog photography`,
     author: `B. Kawecki`,
     siteUrl: `http://localhost:8000/`,
   },
   plugins: [
-    `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `cards`,
-        path: `${__dirname}/src/markdown/cards`,
       },
     },
 
@@ -58,24 +50,35 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: `https://mw-strapi-db.herokuapp.com`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`photo`],
+        contentTypes: [`photo`, `product`],
       },
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        path: `${__dirname}/locales`,
+        languages: [`ru`, `en`, `de`],
+        defaultLanguage: `ru`,
 
-    // {
-    //   resolve: `gatsby-plugin-intl`,
-    //   options: {
-    //     // language JSON resource path
-    //     path: `${__dirname}/src/i18n`,
-    //     // supported language
-    //     languages: [`en`, `ru`, `de`],
-    //     // language file path
-    //     defaultLanguage: `ru`,
-    //     // option to redirect to `/ko` when connecting `/`
-    //     redirect: true,
-    //   },
-    // },
+        // you can pass any i18next options
+        // pass following options to allow message content as a key
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+      },
+    },
   ],
 }

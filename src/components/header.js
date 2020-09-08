@@ -1,18 +1,9 @@
 import React, { useState } from "react"
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Nav,
-} from "reactstrap"
+import { Collapse, Navbar, NavbarToggler, NavItem } from "reactstrap"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
-import { FaLanguage } from "react-icons/fa"
+import { Trans } from "gatsby-plugin-react-i18next"
+import Toggler from "./Toggler"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,7 +12,7 @@ const Header = () => {
 
   return (
     <>
-      <Navbar expand="sm" light fixed="top">
+      <Navbar expand="md" light fixed="top">
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Scrollspy
@@ -33,46 +24,51 @@ const Header = () => {
           >
             <NavItem>
               <AnchorLink href="#hero" className="navlink">
-                Home
+                <Trans>home</Trans>
               </AnchorLink>
             </NavItem>
             <NavItem>
               <AnchorLink href="#work" className="navlink">
-                About
+                <Trans>about</Trans>
               </AnchorLink>
             </NavItem>
             <NavItem>
               <AnchorLink href="#gallery" className="navlink">
-                Gallery
+                <Trans>gallery</Trans>
               </AnchorLink>
             </NavItem>
             <NavItem>
               <AnchorLink href="#shop" className="navlink">
-                Shop
+                <Trans>shop</Trans>
               </AnchorLink>
             </NavItem>
             <NavItem>
               <AnchorLink href="#contact" className="navlink">
-                Contact
+                <Trans>contact</Trans>
               </AnchorLink>
             </NavItem>
           </Scrollspy>
         </Collapse>
-        <Nav>
+        {/* <Nav>
           <NavItem>
             <UncontrolledDropdown>
               <DropdownToggle nav caret className="navlink">
                 <FaLanguage style={{ fontSize: "3rem" }} />
               </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>English</DropdownItem>
-                <DropdownItem>German</DropdownItem>
-                <DropdownItem>Russian</DropdownItem>
+              <DropdownMenu className="languages">
+                {languages.map(lng => (
+                  <DropdownItem key={lng}>fluid="md"
+                    <Link to={"/"} language={lng}>
+                      {lng}
+                    </Link>
+                  </DropdownItem>
+                ))}
               </DropdownMenu>
             </UncontrolledDropdown>
           </NavItem>
-        </Nav>
+        </Nav> */}
       </Navbar>
+      <Toggler />
     </>
   )
 }

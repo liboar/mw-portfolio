@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 /* COMPONENTS */
 import Layout from "../components/layout"
@@ -8,6 +7,8 @@ import Hero from "../components/hero"
 import Work from "../components/work"
 import Gallery from "../components/Gallery"
 import Shop from "../components/Shop"
+import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 
 const IndexPage = () => {
   return (
@@ -17,20 +18,10 @@ const IndexPage = () => {
       <Work />
       <Gallery />
       <Shop />
+      <Contact />
+      <Footer />
     </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    bgHero: file(relativePath: { eq: "bg-hero.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1920, quality: 90) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage

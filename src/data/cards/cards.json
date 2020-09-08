@@ -1,0 +1,84 @@
+[
+  {
+    "card-id": 1,
+    "language": "de",
+    "featuredImage": "../../images/work-artist.png",
+    "title": "001-card",
+    "buttonText": "Lies mehr über mich",
+    "buttonLink": "/about",
+    "cardText": "Ich bin eine Analogfotografin aus Moskau."
+  },
+  {
+    "card-id": 2,
+    "language": "de",
+    "featuredImage": "../../images/work-camera.png",
+    "title": "002-card",
+    "buttonText": "Hier ist meine Gallerie",
+    "buttonLink": "#gallery",
+    "cardText": "Meine Hauptkamera ist die Pentax K1000."
+  },
+  {
+    "card-id": 3,
+    "language": "de",
+    "featuredImage": "../../images/work-krokus.png",
+    "title": "003-card",
+    "buttonText": "Kaufe meine Produkte",
+    "buttonLink": "#shop",
+    "cardText": "Ich schieße und drucke Schwarz-Weiß-Fotos."
+  },
+  {
+    "card-id": 4,
+    "language": "ru",
+    "featuredImage": "../../images/work-artist.png",
+    "title": "001-card",
+    "buttonText": "Читать обо мне",
+    "buttonLink": "/about",
+    "cardText": "Я аналоговый фотохудожник из Москвы."
+  },
+  {
+    "card-id": 5,
+    "language": "ru",
+    "featuredImage": "../../images/work-camera.png",
+    "title": "002-card",
+    "buttonText": "Смотреть галерею",
+    "buttonLink": "#gallery",
+    "cardText": "Моя главная камера – Pentax K1000."
+  },
+  {
+    "card-id": 6,
+    "language": "ru",
+    "featuredImage": "../../images/work-krokus.png",
+    "title": "003-card",
+    "buttonText": "Перейти в магазин",
+    "buttonLink": "#shop",
+    "cardText": "Я снимаю и печатаю черно-белые фотографии."
+  },
+  {
+    "card-id": 7,
+    "language": "en",
+    "featuredImage": "../../images/work-artist.png",
+    "title": "001-card",
+    "buttonText": "Read more about me",
+    "buttonTextDe": "Read more about me",
+    "buttonLink": "/about",
+    "cardText": "I am an analog photographer from Moscow."
+  },
+  {
+    "card-id": 8,
+    "language": "en",
+    "featuredImage": "../../images/work-camera.png",
+    "title": "002-card",
+    "buttonText": "Have a look at my gallery",
+    "buttonLink": "#gallery",
+    "cardText": "My main camera is the Pentax K1000."
+  },
+  {
+    "card-id": 9,
+    "language": "en",
+    "featuredImage": "../../images/work-krokus.png",
+    "title": "003-card",
+    "buttonText": "Check out my shop",
+    "buttonLink": "#shop",
+    "cardText": "I shoot and print black and white photography."
+  }
+]

@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "../styles/index.scss"
+import "../../node_modules/react-multi-carousel/lib/styles.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

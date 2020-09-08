@@ -11,6 +11,7 @@ const WorkCard = ({ excerpt, fluid, cardId, buttonLink, buttonText }) => {
       data-sal-duration="500"
       data-sal-delay="300"
       data-sal-easing="ease"
+      key={cardId}
     >
       <Col sm="3" md="3" xs="6">
         <Img width="100%" alt="no img" fluid={fluid} className="card-img" />
@@ -21,7 +22,7 @@ const WorkCard = ({ excerpt, fluid, cardId, buttonLink, buttonText }) => {
           <CardText>
             <>{excerpt}</>
           </CardText>
-          <Link to={buttonLink}>
+          <Link to={`${buttonLink}`}>
             <Button className="workButton">{buttonText}</Button>
           </Link>
         </CardBody>

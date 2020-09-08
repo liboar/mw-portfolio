@@ -1,0 +1,12 @@
+.toggler {
+  float: right;
+  right: 1rem;
+  top: 0.5rem;
+  z-index: 500;
+  position: fixed;
+  color: $dark-text;
+  &:hover {
+    cursor: pointer;
+    color: $hero-color;
+  }
+}

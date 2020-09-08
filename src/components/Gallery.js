@@ -3,7 +3,7 @@ import ImageGallery from "react-image-gallery"
 import { StaticQuery, graphql } from "gatsby"
 import { Container } from "reactstrap"
 
-const Gallery = ({ className }) => {
+const Gallery = () => {
   return (
     <StaticQuery
       query={indexQuery}
@@ -18,14 +18,14 @@ const Gallery = ({ className }) => {
 
         return (
           <section id="gallery" className="section">
-            <Container className="imageGallery mb-0">
+            <Container className="imageGallery">
               <ImageGallery
                 items={images}
-                thumbnailPosition="left"
+                thumbnailPosition="bottom"
                 showPlayButton={false}
                 lazyLoad={true}
                 showFullscreenButton={false}
-                showBullets={true}
+                showBullets={false}
               />
             </Container>
           </section>
