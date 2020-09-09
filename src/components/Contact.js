@@ -79,11 +79,11 @@ const Contact = () => {
                       placeholder={t("yourMessage")}
                     />
                   </FormGroup>
-                  <div data-netlify-recaptcha="true"></div>
                   <Button className="workButton">
                     <Trans>submit</Trans>
                   </Button>
                 </Form>
+                <div data-netlify-recaptcha="true"></div>
               </Col>
             </Row>
           </div>
