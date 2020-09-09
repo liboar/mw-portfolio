@@ -14,7 +14,7 @@ const WorkCard = ({ excerpt, fluid, cardId, buttonLink, buttonText }) => {
       key={cardId}
     >
       <Col sm="3" md="3" xs="6">
-        <Img width="100%" alt="no img" fluid={fluid} className="card-img" />
+        <Img width="100%" alt="no img" fluid={fluid} />
       </Col>
 
       <Col sm="9" md="9" xs="10" className="cardBody m-auto">

@@ -2,9 +2,10 @@ import React, { useState } from "react"
 import Img from "gatsby-image"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
 import { Trans } from "gatsby-plugin-react-i18next"
+import ShopItemForm from "./shopItemForm"
 
 const ShopItemModal = props => {
-  const { price, description, type, fluid, key } = props
+  const { price, description, type, fluid, key, size } = props
 
   const [modal, setModal] = useState(false)
 
@@ -15,26 +16,18 @@ const ShopItemModal = props => {
       <Button color="danger" onClick={toggle} className="workButton">
         <Trans>order</Trans>
       </Button>
-      <Modal isOpen={modal} toggle={toggle} className="customModal">
-        <ModalHeader toggle={toggle}>
-          Ihre Bestellung: {description}
-        </ModalHeader>
+      <Modal isOpen={modal} toggle={toggle} className="customModal" size="lg">
+        <ModalHeader toggle={toggle}>Ihre Bestellung</ModalHeader>
 
-        <ModalBody>
-          <div style={{ width: "200px" }}>
-            <Img width="100%" alt={description} fluid={fluid} />
-          </div>
-          <p>Item: {type}</p>
-          <p>Preis: {price} &#8381;</p>
-        </ModalBody>
-        <ModalFooter>
-          <Button color="primary" onClick={toggle}>
-            Bestellung senden
-          </Button>{" "}
-          <Button color="secondary" onClick={toggle}>
-            Abbrechen
-          </Button>
-        </ModalFooter>
+        <ShopItemForm
+          fluid={fluid}
+          description={description}
+          price={price}
+          key={key}
+          type={type}
+          toggle={toggle}
+          size={size}
+        />
       </Modal>
     </div>
   )

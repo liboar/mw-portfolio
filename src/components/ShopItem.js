@@ -49,6 +49,7 @@ const ShopItem = ({
               price={price}
               key={key}
               type={type}
+              size={size}
             />
           </CardBody>
         </Col>

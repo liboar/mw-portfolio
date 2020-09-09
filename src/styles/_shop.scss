@@ -12,3 +12,19 @@
   text-transform: capitalize;
   border: 0;
 }
+
+.shopFormSummary {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: right;
+  text-transform: capitalize;
+
+  #right {
+    text-align: right;
+  }
+  #left {
+    text-align: left;
+  }
+}
