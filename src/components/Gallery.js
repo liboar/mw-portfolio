@@ -1,7 +1,6 @@
 import React from "react"
 import ImageGallery from "react-image-gallery"
 import { StaticQuery, graphql } from "gatsby"
-import { Container } from "reactstrap"
 
 const Gallery = () => {
   return (
@@ -18,7 +17,7 @@ const Gallery = () => {
 
         return (
           <section id="gallery" className="section">
-            <Container className="imageGallery">
+            <div className="imageGallery container">
               <ImageGallery
                 items={images}
                 thumbnailPosition="bottom"
@@ -27,7 +26,7 @@ const Gallery = () => {
                 showFullscreenButton={false}
                 showBullets={false}
               />
-            </Container>
+            </div>
           </section>
         )
       }}

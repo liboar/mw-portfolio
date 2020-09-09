@@ -1,3 +1,0 @@
-app: übersetzung
-
-plugins: gatsby-plugin-prefetch-google-fonts, gatsby-plugin-intl

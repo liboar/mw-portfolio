@@ -8,22 +8,24 @@
 }
 
 .nav {
-  max-width: 55%;
+  max-width: 550px;
   display: flex;
 }
 
 .navlink {
   color: $dark-text;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-.isCurrent {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+.isCurrent > a {
+  border-bottom: solid $dark-text 2px;
+  //   text-decoration: underline;
+  //   text-decoration-thickness: 2px;
 }
 
-a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+.navbar a:hover {
+  text-decoration: none;
+  // text-decoration-thickness: 2px;
   color: $dark-text;
+  border-bottom: solid $dark-text 2px;
 }

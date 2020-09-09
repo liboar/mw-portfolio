@@ -7,23 +7,23 @@ import { Trans } from "gatsby-plugin-react-i18next"
 const Footer = () => {
   return (
     <footer className="footer" fixed="bottom">
-      <div className="leftFooter">
+      {/* <div className="leftFooter">
         <p style={{ margin: "auto" }}>
           <Trans>title</Trans> &copy;2020
         </p>
-      </div>
+      </div> */}
 
       <ul className="rightFooter">
-        {/* <li>
-          <Trans>title</Trans> &copy;2020
-        </li> */}
-
         <li>
+          <Trans>title</Trans> &copy;2020
+        </li>
+
+        {/* <li>
           {" "}
           <Link to={`/impressum/`}>
             <Trans>impressum</Trans>
           </Link>
-        </li>
+        </li> */}
         <li>
           <a
             className="instagramIcon"

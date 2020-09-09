@@ -21,11 +21,28 @@ const Contact = () => {
             <Row>
               <Col lg={{ size: 6, offset: 3 }}>
                 <Form
-                  method="post"
-                  action="localhost:3000/contact"
+                  name="Contact Form"
+                  method="POST"
+                  data-netlify="true"
                   className="contactForm"
+                  data-sal="slide-up"
+                  data-sal-duration="400"
+                  data-sal-delay="100"
+                  data-sal-easing="ease"
                 >
+                  <input type="hidden" name="form-name" value="Contact Form" />
                   <FormGroup>
+                    <FormGroup>
+                      <Label for="name" className="contactLabel">
+                        <Trans>name</Trans>
+                      </Label>
+                      <Input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder={t("yourName")}
+                      />
+                    </FormGroup>
                     <Label for="exampleEmail" className="contactLabel">
                       <Trans>email</Trans>
                     </Label>
@@ -37,25 +54,14 @@ const Contact = () => {
                     />
                   </FormGroup>
                   <FormGroup>
-                    <Label for="number" className="contactLabel">
-                      <Trans>number</Trans>
+                    <Label for="subject" className="contactLabel">
+                      <Trans>subject</Trans>
                     </Label>
                     <Input
                       type="text"
-                      name="number"
-                      id="number"
+                      name="subject"
+                      id="subject"
                       placeholder={t("yourNumber")}
-                    />
-                  </FormGroup>
-                  <FormGroup>
-                    <Label for="name" className="contactLabel">
-                      <Trans>name</Trans>
-                    </Label>
-                    <Input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder={t("yourName")}
                     />
                   </FormGroup>
 

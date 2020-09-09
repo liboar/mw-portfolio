@@ -1,9 +1,10 @@
 import React, { useState } from "react"
+import Img from "gatsby-image"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
 import { Trans } from "gatsby-plugin-react-i18next"
 
 const ShopItemModal = props => {
-  const { className } = props
+  const { price, description, type, fluid, key } = props
 
   const [modal, setModal] = useState(false)
 
@@ -14,23 +15,24 @@ const ShopItemModal = props => {
       <Button color="danger" onClick={toggle} className="workButton">
         <Trans>order</Trans>
       </Button>
-      <Modal isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+      <Modal isOpen={modal} toggle={toggle} className="customModal">
+        <ModalHeader toggle={toggle}>
+          Ihre Bestellung: {description}
+        </ModalHeader>
+
         <ModalBody>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          <div style={{ width: "200px" }}>
+            <Img width="100%" alt={description} fluid={fluid} />
+          </div>
+          <p>Item: {type}</p>
+          <p>Preis: {price} &#8381;</p>
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={toggle}>
-            Do Something
+            Bestellung senden
           </Button>{" "}
           <Button color="secondary" onClick={toggle}>
-            Cancel
+            Abbrechen
           </Button>
         </ModalFooter>
       </Modal>

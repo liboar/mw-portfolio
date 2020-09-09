@@ -4,7 +4,8 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero"
-import Work from "../components/work"
+// import Work from "../components/work"
+import About from "../components/about"
 import Gallery from "../components/Gallery"
 import Shop from "../components/Shop"
 import Contact from "../components/Contact"
@@ -15,7 +16,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `photography`, `ikhmalian`]} />
       <Hero />
-      <Work />
+      <About />
       <Gallery />
       <Shop />
       <Contact />

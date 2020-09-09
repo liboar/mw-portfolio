@@ -24,10 +24,22 @@ const hero = ({ className }) => (
           <section className="section" id="hero">
             <div className="container titles mr-auto">
               <a href="/">
-                <h1 className="title display-4">
+                <h1
+                  className="title display-4"
+                  data-sal="slide-down"
+                  data-sal-duration="400"
+                  data-sal-delay="400"
+                  data-sal-easing="ease"
+                >
                   <Trans>title</Trans>
                 </h1>
-                <h3 className="subtitle">
+                <h3
+                  className="subtitle"
+                  data-sal="slide-up"
+                  data-sal-duration="400"
+                  data-sal-delay="600"
+                  data-sal-easing="ease"
+                >
                   <Trans>subtitle</Trans>
                 </h3>
               </a>

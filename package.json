@@ -8,6 +8,7 @@
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
     "bootstrap": "^4.5.2",
+    "fitty": "^2.3.2",
     "gatsby": "^2.24.47",
     "gatsby-background-image": "^1.1.2",
     "gatsby-image": "^2.4.15",

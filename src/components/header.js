@@ -12,12 +12,20 @@ const Header = () => {
 
   return (
     <>
-      <Navbar expand="md" light fixed="top">
+      <Navbar
+        expand="md"
+        light
+        fixed="top"
+        data-sal="fade"
+        data-sal-duration="400"
+        data-sal-delay="200"
+        data-sal-easing="ease"
+      >
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Scrollspy
             className={`Scrollspy container nav mr-auto`}
-            items={["hero", "work", "gallery", "shop", "contact"]}
+            items={["hero", "about", "gallery", "shop", "contact"]}
             currentClassName="isCurrent"
             offset={-100}
             navbar
@@ -28,7 +36,7 @@ const Header = () => {
               </AnchorLink>
             </NavItem>
             <NavItem>
-              <AnchorLink href="#work" className="navlink">
+              <AnchorLink href="#about" className="navlink">
                 <Trans>about</Trans>
               </AnchorLink>
             </NavItem>

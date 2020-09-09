@@ -22,25 +22,13 @@ const ShopItem = ({
 }) => {
   return (
     <div key={key}>
-      <Card
-        style={{
-          margin: "3rem",
-          backgroundColor: "#f5f0ed",
-          textAlign: "center",
-          textTransform: "capitalize",
-          border: "0",
-        }}
-      >
+      <Card className="shopCard">
         <Col style={{ padding: "0" }}>
           <Img
             width="100%"
             alt={description}
             fluid={fluid}
-            style={{
-              borderColor: "#3a3a3a",
-              border: "1rem",
-              borderStyle: "solid",
-            }}
+            className="shopImage"
           />
         </Col>
         <Col>
@@ -55,7 +43,13 @@ const ShopItem = ({
             </CardSubtitle>
             <CardText>{price} &#8381;</CardText>
 
-            <ShopItemModal />
+            <ShopItemModal
+              fluid={fluid}
+              description={description}
+              price={price}
+              key={key}
+              type={type}
+            />
           </CardBody>
         </Col>
       </Card>
