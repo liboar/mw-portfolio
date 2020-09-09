@@ -83,6 +83,7 @@ const Contact = () => {
                   <Button className="workButton">
                     <Trans>submit</Trans>
                   </Button>
+                  <div data-netlify-recaptcha="true"></div>
                 </Form>
               </Col>
             </Row>
