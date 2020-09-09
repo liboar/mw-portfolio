@@ -24,7 +24,7 @@ const Contact = () => {
                   name="Contact Form"
                   method="POST"
                   data-netlify-honeypot="bot-field"
-                  data-netlify="true"
+                  data-netlify="false"
                   className="contactForm"
                   data-sal="slide-up"
                   data-sal-duration="400"

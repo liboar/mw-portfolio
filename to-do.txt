@@ -2,37 +2,14 @@ allgemein:
 - andere Schriften prüfen
 - about page schreiben
 
-about section:
-
-Wer ich bin:
-Ich bin eine Analogfotografin aus Moskau.
-Ich habe mein Studium an der Marchi abgeschlossen.
-Ich beschäftige mich mit analoger Fotografie seit 2015.
-
-Was ich mache:
-Um meine Fotos zu drucken nutze ich das Silbergelantineverfahren.
-Die meisten Fotos nehme ich in schwarz-weiß auf.
-Meine Hauptkamera ist die Pentax K1000.
-Portraits und Stillleben.
-
-Meine Inspiration:
-Sally Mann, Tiefe 
-Diana Arbus, Uneindeutigkeit des Themas
-
-Ende:
-Wenn euch meine Arbeit gefällt, schaut in meinem Shop vorbei.
-
-
-
 gallery section:
 - Fotos von Marianna
+- custom styles aus node-modules in eigenen Code übertragen
 
 shop section:
 - modal Formular mit netlify form
 - telegram bot
 - Sprachen hinzufügen
 
-contact section:
-- Formular mit netlify form
 
 
