@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Container } from "reactstrap"
-import fitty from "fitty"
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -16,7 +15,6 @@ const About = () => {
       }
     }
   `)
-  fitty("#grid-box")
 
   const aboutImage = data.file.childImageSharp.fluid
   return (
