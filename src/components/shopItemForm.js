@@ -20,8 +20,8 @@ const ShopItemForm = props => {
     <Form
       name="Shop Form"
       method="POST"
-      data-netlify-honeypot="bot-field"
-      data-netlify="false"
+      // data-netlify-honeypot="bot-field"
+      // data-netlify="true"
     >
       <ModalBody style={{ textAlign: "right" }}>
         <div className="shopFormSummary">
