@@ -23,9 +23,9 @@ const Contact = () => {
                 <Form
                   name="Contact Form"
                   method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
                   data-netlify-recaptcha="true"
+                  data-netlify-honeypot="bot-field"
+                  data-netlify="true"
                   className="contactForm"
                   data-sal="slide-up"
                   data-sal-duration="400"
@@ -79,11 +79,10 @@ const Contact = () => {
                       placeholder={t("yourMessage")}
                     />
                   </FormGroup>
-
+                  <div data-netlify-recaptcha="true"></div>
                   <Button className="workButton">
                     <Trans>submit</Trans>
                   </Button>
-                  <div data-netlify-recaptcha="true"></div>
                 </Form>
               </Col>
             </Row>
