@@ -18,25 +18,6 @@ const Contact = () => {
           }}
         >
           <div>
-            <form
-              name="shop"
-              method="post"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              hidden
-            >
-              {/* You still need to add the hidden input with the form name to your JSX form */}
-              <input type="hidden" name="form-name" value="contact" />
-              <input
-                type="phone"
-                name="phone"
-                id="phone"
-                placeholder="Ihre
-              Mobilfunknummer"
-              />{" "}
-              ...
-            </form>
-
             <Row>
               <Col lg={{ size: 6, offset: 3 }}>
                 <Form
