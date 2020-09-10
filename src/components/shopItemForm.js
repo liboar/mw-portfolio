@@ -34,13 +34,8 @@ const ShopItemForm = props => {
                 shopping checkout form
               </option>
             </Input>
+            <div>{price} &#8381;</div>
           </FormGroup>
-          <FormGroup>
-            <Input type="select" name="select" id="exampleSelect">
-              <option>{price} &#8381;</option>
-            </Input>
-          </FormGroup>
-
           <FormGroup
             id="right"
             style={{ alignSelf: "right", paddingTop: "1rem" }}
