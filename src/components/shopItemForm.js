@@ -23,7 +23,7 @@ const ShopItemForm = props => {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="Contact Form" />
+      <input type="hidden" name="form-name" value="Shop Form" />
 
       <ModalBody style={{ textAlign: "right" }}>
         <div className="shopFormSummary">
