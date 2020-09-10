@@ -43,7 +43,18 @@ const ShopItem = ({
               <div>{technique}</div>
               {price} &#8381;
             </CardText>
-
+            <form
+              name="Shop Form"
+              method="post"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              hidden
+            >
+              <input type="hidden" name="form-name" value="Shop Form" />
+              <input type="text" name="phone" />
+              <input type="text" name="name" />
+              <input type="text" name="shopItem" />
+            </form>
             <ShopItemModal
               fluid={fluid}
               description={description}
