@@ -52,7 +52,6 @@ const ShopItemForm = props => {
                 <div className="shopFormSummaryOrder">
                   <div className="bold">
                     1 x <label className="capitalize">{description}</label>
-                    <input type="hidden" name="shopItem" value={description} />
                   </div>
                   <div>{price} &#8381;</div>
                 </div>
