@@ -8,20 +8,15 @@
   height: calc(80vh - 80px) !important; // 80 px for the thumbnail space
 }
 
-.image-gallery-svg {
-  //CUSTOM STYLE height: 120ox, width: 60px
-  height: 120px !important;
-  width: 60px !important;
-}
-
 .image-gallery-thumbnail {
-  height: 100px !important;
+  height: 120px !important;
 }
 .image-gallery-thumbnail-image {
   //CUSTOM STYLE width: 100%
   width: auto !important;
   height: 100px !important;
 }
+
 @media (min-width: $ig-small-screen) {
   // Don't hover on screens smaller than small
   &:hover {
@@ -29,4 +24,10 @@
       transform: scale(1) !important;
     }
   }
+}
+
+.image-gallery-svg {
+  //CUSTOM STYLE height: 120ox, width: 60px
+  height: 120px !important;
+  width: 60px !important;
 }
