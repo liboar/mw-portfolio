@@ -14,61 +14,119 @@ import {
 import { AvForm, AvField } from "availity-reactstrap-validation"
 
 const ShopItemForm = props => {
-  const { price, description, type, fluid, key, size, toggle } = props
+  const {
+    price,
+    description,
+    type,
+    fluid,
+    key,
+    size,
+    toggle,
+    material,
+    technique,
+  } = props
 
   return (
     <>
       <AvForm
         name="shop"
-        sssadasdasdasdasdasdasdasdsad
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="shop" />
-        <ModalBody style={{ textAlign: "right" }}>
-          <div className="shopFormSummary">
-            <AvField
-              name="phone"
-              type="text"
-              type="phone"
-              name="phone"
-              id="phone"
-              label="Phone Number"
-              required
-              validate={{
-                required: {
-                  value: true,
-                  errorMessage: "Please enter valid phone number",
-                },
-                pattern: {
-                  value: "^[0-9]*$",
-                  errorMessage:
-                    "Your number must be composed only with numbers",
-                },
-                minLength: {
-                  value: 6,
-                  errorMessage:
-                    "Your number must be between 6 and 16 characters",
-                },
-                maxLength: {
-                  value: 16,
-                  errorMessage:
-                    "Your number must be between 6 and 16 characters",
-                },
-              }}
-            />
-          </div>
-        </ModalBody>
         <ModalBody>
-          {" "}
-          <Img
-            fluid={fluid}
-            alt="no img"
-            style={{
-              margin: "1rem",
-            }}
-          />
+          <Row>
+            <Col md={8}>
+              <Img
+                fluid={fluid}
+                alt="no img"
+                style={{
+                  margin: "1rem",
+                }}
+              />
+            </Col>
+            <Col md={4}>
+              <div className="shopFormSummary">
+                <h3>Your order:</h3>
+                <div className="shopFormSummaryOrder">
+                  <div className="bold">
+                    1 x <label className="capitalize">{description}</label>
+                    <input type="hidden" name="shopItem" value={description} />
+                  </div>
+                  <div>{price} &#8381;</div>
+                </div>
+                <div className="shopFormSummaryInformation">
+                  <p>
+                    Please type in your credentials. I will get in contact with
+                    you as soon as possible.
+                  </p>
+                  <AvField
+                    id="right"
+                    name="name"
+                    type="text"
+                    type="name"
+                    name="name"
+                    id="name"
+                    label="Name"
+                    required
+                    validate={{
+                      required: {
+                        value: true,
+                        errorMessage: "Please enter valid name",
+                      },
+                      pattern: {
+                        value: "^[a-zA-ZЯа-я_]+( [a-zA-ZЯа-я_]+)*$",
+                        errorMessage:
+                          "Your number must be composed only with letters",
+                      },
+                      minLength: {
+                        value: 4,
+                        errorMessage:
+                          "Your number must be longer than 3 charakters",
+                      },
+                      maxLength: {
+                        value: 25,
+                        errorMessage:
+                          "Your number must be shorter than 25 characters",
+                      },
+                    }}
+                  />
+                  <AvField
+                    id="right"
+                    name="phone"
+                    type="text"
+                    type="phone"
+                    name="phone"
+                    id="phone"
+                    label="Phone number"
+                    required
+                    validate={{
+                      required: {
+                        value: true,
+                        errorMessage: "Please enter valid phone number",
+                      },
+                      pattern: {
+                        value: "^[0-9]*$",
+                        errorMessage:
+                          "Your number must be composed only with numbers",
+                      },
+                      minLength: {
+                        value: 6,
+                        errorMessage:
+                          "Your number must be between 6 and 16 characters",
+                      },
+                      maxLength: {
+                        value: 16,
+                        errorMessage:
+                          "Your number must be between 6 and 16 characters",
+                      },
+                    }}
+                  />
+                </div>
+              </div>
+            </Col>
+          </Row>
         </ModalBody>{" "}
         <ModalFooter>
           <Button color="primary">Bestellung senden</Button>

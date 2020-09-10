@@ -4,7 +4,16 @@ import { Trans } from "gatsby-plugin-react-i18next"
 import ShopItemForm from "./shopItemForm"
 
 const ShopItemModal = props => {
-  const { price, description, type, fluid, key, size } = props
+  const {
+    price,
+    description,
+    type,
+    fluid,
+    key,
+    size,
+    material,
+    technique,
+  } = props
 
   const [modal, setModal] = useState(false)
 
@@ -15,7 +24,7 @@ const ShopItemModal = props => {
       <Button color="danger" onClick={toggle} className="workButton">
         <Trans>order</Trans>
       </Button>
-      <Modal isOpen={modal} toggle={toggle} className="customModal" size="lg">
+      <Modal isOpen={modal} toggle={toggle} className="customModal" size="xl">
         <ModalHeader toggle={toggle}></ModalHeader>
 
         <ShopItemForm
@@ -26,6 +35,8 @@ const ShopItemModal = props => {
           type={type}
           toggle={toggle}
           size={size}
+          material={material}
+          technique={technique}
         />
       </Modal>
     </div>

@@ -6,7 +6,7 @@
 }
 
 .shopCard {
-  margin: 3rem;
+  margin: 2rem;
   background-color: $bright-bg;
   text-align: center;
   text-transform: capitalize;
@@ -14,17 +14,27 @@
 }
 
 .shopFormSummary {
-  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  > * {
+    margin: 1rem;
+  }
+  .capitalize {
+    text-transform: capitalize;
+  }
+  .bold {
+    font-weight: bold;
+  }
+}
+
+.shopFormSummaryOrder {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: right;
-  text-transform: capitalize;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
 
-  #right {
-    text-align: right;
-  }
-  #left {
-    text-align: left;
-  }
+.shopFormSummaryInformation {
 }

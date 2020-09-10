@@ -51,6 +51,8 @@ const ShopItem = ({
               key={key}
               type={type}
               size={size}
+              material={material}
+              technique={technique}
             />
           </CardBody>
         </Col>
