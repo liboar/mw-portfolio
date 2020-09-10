@@ -28,7 +28,7 @@ const ShopItemForm = props => {
 
   return (
     <>
-      <AvForm name="Shop Form" method="POST">
+      <AvForm name="Shop Form" method="post">
         <input type="hidden" name="form-name" value="Shop Form" />
         <ModalBody>
           <Row>

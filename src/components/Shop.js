@@ -67,26 +67,14 @@ const Shop = () => {
       >
         <form
           name="Shop Form"
-          method="POST"
-          data-netlify="true"
+          method="post"
+          netlify
           data-netlify-honeypot="bot-field"
           hidden
         >
           <input type="hidden" name="form-name" value="Shop Form" />
-          <input
-            type="text"
-            name="phone"
-            id="phone"
-            placeholder="Ihre
-              Mobilfunknummer"
-          />
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Ihre
-              Mobilfunknummer"
-          />
+          <input type="text" name="phone" />
+          <input type="text" name="name" />
           <input type="text" name="shopItem" />
         </form>
         <Carousel
