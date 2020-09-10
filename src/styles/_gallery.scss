@@ -3,9 +3,10 @@
   padding-top: 6rem;
 }
 
-.image-gallery-slide .image-gallery-image {//CUSTOMIZED STYLE
-    height: calc(80vh - 80px) !important; // 80 px for the thumbnail space
-  
+.image-gallery-slide .image-gallery-image {
+  //CUSTOMIZED STYLE
+  height: calc(80vh - 80px) !important; // 80 px for the thumbnail space
+}
 
 .image-gallery-svg {
   //CUSTOM STYLE height: 120ox, width: 60px
