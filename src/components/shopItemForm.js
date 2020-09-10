@@ -18,12 +18,12 @@ const ShopItemForm = props => {
 
   return (
     <Form
-      name="Shop Form"
+      name="shop"
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
-      <input type="hidden" name="form-name" value="Shop Form" />
+      <input type="hidden" name="shop" value="shop" />
 
       <ModalBody style={{ textAlign: "right" }}>
         <div className="shopFormSummary">
@@ -63,9 +63,7 @@ const ShopItemForm = props => {
       </ModalBody>
 
       <ModalFooter>
-        <Button color="primary" onClick={toggle} type="submit">
-          Bestellung senden
-        </Button>
+        <Button color="primary">Bestellung senden</Button>
         <Button color="secondary" onClick={toggle}>
           Abbrechen
         </Button>
