@@ -53,7 +53,12 @@ const ShopItemForm = props => {
                   Please type in your credentials. I will get in contact with
                   you as soon as possible.
                 </p>
-                <AvForm name="Shop Form" method="post">
+                <AvForm
+                  name="Shop Form"
+                  method="post"
+                  netlify
+                  data-netlify-honeypot="bot-field"
+                >
                   <input type="hidden" name="form-name" value="Shop Form" />
                   <AvField
                     type="text"
