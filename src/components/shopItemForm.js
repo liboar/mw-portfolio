@@ -115,7 +115,7 @@ const ShopItemForm = props => {
                     value={description}
                     hidden
                   />
-                  <Button color="primary" type="submit">
+                  <Button color="primary" type="submit" onClick={toggle}>
                     Bestellung senden
                   </Button>
                   <Button color="secondary" onClick={toggle}>
