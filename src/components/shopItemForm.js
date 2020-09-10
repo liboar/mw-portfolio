@@ -28,12 +28,7 @@ const ShopItemForm = props => {
 
   return (
     <>
-      <AvForm
-        name="Shop Form"
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
+      <AvForm name="Shop Form" method="POST">
         <input type="hidden" name="form-name" value="Shop Form" />
         <ModalBody>
           <Row>

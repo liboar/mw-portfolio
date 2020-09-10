@@ -65,14 +65,13 @@ const Shop = () => {
         data-sal-delay="100"
         data-sal-easing="ease"
       >
-        {/* <form
+        <form
           name="Shop Form"
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           hidden
         >
-         You still need to add the hidden input with the form name to your JSX form 
           <input type="hidden" name="form-name" value="Shop Form" />
           <input
             type="text"
@@ -88,8 +87,8 @@ const Shop = () => {
             placeholder="Ihre
               Mobilfunknummer"
           />
-           <input type="shopItem" name="shopItem" /> 
-        </form> */}
+          <input type="text" name="shopItem" />
+        </form>
         <Carousel
           responsive={responsive}
           additionalTransfrom={0}
