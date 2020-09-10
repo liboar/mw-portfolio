@@ -122,9 +122,7 @@ const ShopItemForm = props => {
           </Row>
         </ModalBody>{" "}
         <ModalFooter>
-          <Button color="primary" type="submit">
-            Bestellung senden
-          </Button>
+          <Button color="primary">Bestellung senden</Button>
           <Button color="secondary" onClick={toggle}>
             Abbrechen
           </Button>

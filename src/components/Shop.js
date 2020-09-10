@@ -67,7 +67,7 @@ const Shop = () => {
       >
         <form
           name="shop"
-          method="post"
+          method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           hidden
