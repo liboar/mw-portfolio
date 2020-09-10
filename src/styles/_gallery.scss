@@ -10,10 +10,11 @@
 
 .image-gallery-thumbnail {
   height: 100px !important;
+  width: auto !important;
 }
 .image-gallery-thumbnail-image {
   //CUSTOM STYLE width: 100%
-  width: 100% !important;
+  width: auto !important;
   height: 100px !important;
 }
 
