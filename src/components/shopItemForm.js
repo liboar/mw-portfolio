@@ -56,8 +56,9 @@ const ShopItemForm = props => {
                 <AvForm
                   name="Shop Form"
                   method="post"
-                  netlify
+                  data-netlify="netlify"
                   data-netlify-honeypot="bot-field"
+                  onSubmit="submit"
                 >
                   <input type="hidden" name="form-name" value="Shop Form" />
                   <AvField
