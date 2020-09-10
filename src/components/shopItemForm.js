@@ -59,8 +59,7 @@ const ShopItemForm = props => {
             margin: "1rem",
           }}
         />
-      </ModalBody>
-      /*{" "}
+      </ModalBody>{" "}
       <ModalFooter>
         <Button color="primary">Bestellung senden</Button>
         <Button color="secondary" onClick={toggle}>
