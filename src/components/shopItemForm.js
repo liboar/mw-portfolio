@@ -17,6 +17,13 @@ const ShopItemForm = props => {
   const { price, description, type, fluid, key, size, toggle } = props
 
   return (
+    <form hidden name="shop"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="shop" />
+              <input type="phone" name="phone" id="phone" placeholder="Ihre Mobilfunknummer"/>
+      </form>
     <Form
       name="shop"
       method="POST"
