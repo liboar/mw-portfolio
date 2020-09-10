@@ -73,7 +73,7 @@ const Shop = () => {
           hidden
         >
           {/* You still need to add the hidden input with the form name to your JSX form */}
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="form-name" value="shop" />
           <input
             type="phone"
             name="phone"
