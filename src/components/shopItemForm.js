@@ -28,33 +28,34 @@ const ShopItemForm = props => {
 
   return (
     <>
-      <ModalBody>
-        <Row>
-          <Col md={8}>
-            <Img
-              fluid={fluid}
-              alt="no img"
-              style={{
-                margin: "1rem",
-              }}
-            />
-          </Col>
-          <Col md={4}>
-            <div className="shopFormSummary">
-              <h3>Your order:</h3>
-              <div className="shopFormSummaryOrder">
-                <div className="bold">
-                  1 x <label className="capitalize">{description}</label>
+      <AvForm name="Shop Form" method="post">
+        <input type="hidden" name="form-name" value="Shop Form" />
+        <ModalBody>
+          <Row>
+            <Col md={8}>
+              <Img
+                fluid={fluid}
+                alt="no img"
+                style={{
+                  margin: "1rem",
+                }}
+              />
+            </Col>
+            <Col md={4}>
+              <div className="shopFormSummary">
+                <h3>Your order:</h3>
+                <div className="shopFormSummaryOrder">
+                  <div className="bold">
+                    1 x <label className="capitalize">{description}</label>
+                  </div>
+                  <div>{price} &#8381;</div>
                 </div>
-                <div>{price} &#8381;</div>
-              </div>
-              <div className="shopFormSummaryInformation">
-                <p>
-                  Please type in your credentials. I will get in contact with
-                  you as soon as possible.
-                </p>
-                <AvForm name="Shop Form" method="post" onSubmit="submit">
-                  <input type="hidden" name="form-name" value="Shop Form" />
+                <div className="shopFormSummaryInformation">
+                  <p>
+                    Please type in your credentials. I will get in contact with
+                    you as soon as possible.
+                  </p>
+
                   <AvField
                     type="text"
                     name="name"
@@ -115,19 +116,18 @@ const ShopItemForm = props => {
                     value={description}
                     hidden
                   />
-                  <Button color="primary" type="submit" onClick={toggle}>
-                    Bestellung senden
-                  </Button>
-                  <Button color="secondary" onClick={toggle}>
-                    Abbrechen
-                  </Button>
-                </AvForm>
+                </div>
               </div>
-            </div>
-          </Col>
-        </Row>
-      </ModalBody>
-      <ModalFooter></ModalFooter>
+            </Col>
+          </Row>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="primary">Bestellung senden</Button>
+          <Button color="secondary" onClick={toggle}>
+            Abbrechen
+          </Button>
+        </ModalFooter>
+      </AvForm>
     </>
   )
 }
