@@ -15,6 +15,7 @@
 .image-gallery-thumbnail-image {
   //CUSTOM STYLE width: 100%
   width: auto !important;
+  height: 100px !important;
 }
 @media (min-width: $ig-small-screen) {
   // Don't hover on screens smaller than small
