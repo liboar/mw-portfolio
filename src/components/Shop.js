@@ -88,7 +88,7 @@ const Shop = () => {
             placeholder="Ihre
               Mobilfunknummer"
           />
-          <input type="shopItem" name="shopItem" />
+          {/* <input type="shopItem" name="shopItem" /> */}
         </form>
         <Carousel
           responsive={responsive}
