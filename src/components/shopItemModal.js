@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-import Img from "gatsby-image"
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
+import { Button, Modal, ModalHeader } from "reactstrap"
 import { Trans } from "gatsby-plugin-react-i18next"
 import ShopItemForm from "./shopItemForm"
 

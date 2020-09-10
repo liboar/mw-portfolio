@@ -3,8 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import ShopItem from "./ShopItem"
 import Carousel from "react-multi-carousel"
 import "../../node_modules/react-multi-carousel/lib/styles.css"
+import { I18nextContext } from "gatsby-plugin-react-i18next"
 
 const Shop = () => {
+  const { language } = React.useContext(I18nextContext)
   const data = useStaticQuery(graphql`
     {
       allStrapiProduct {
@@ -81,8 +83,10 @@ const Shop = () => {
           renderButtonGroupOutside={false}
           renderDotsOutside={false}
         >
-          {data.allStrapiProduct.edges.map(({ node }) => {
-            return (
+          {data.allStrapiProduct.edges.flatMap(({ node }) =>
+            language !== node.language ? (
+              []
+            ) : (
               <ShopItem
                 key={node.strapiId}
                 description={node.description}
@@ -94,7 +98,7 @@ const Shop = () => {
                 fluid={node.image.childImageSharp.fluid}
               />
             )
-          })}
+          )}
         </Carousel>
       </div>
     </div>

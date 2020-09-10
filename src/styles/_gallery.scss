@@ -3,5 +3,24 @@
   padding-top: 6rem;
 }
 
-.imageGallery {
+.image-gallery-svg {
+  //CUSTOM STYLE height: 120ox, width: 60px
+  height: 70px;
+  width: 60px;
+}
+
+.image-gallery-thumbnail {
+  height: 120px;
+}
+.image-gallery-thumbnail-image {
+  //CUSTOM STYLE width: 100%
+  width: auto;
+}
+@media (min-width: $ig-small-screen) {
+  // Don't hover on screens smaller than small
+  &:hover {
+    .image-gallery-svg {
+      transform: scale(1);
+    }
+  }
 }

@@ -1,15 +1,10 @@
 allgemein:
-- andere Schriften prüfen
-- about page schreiben
+- optionale Schriften prüfen
+- about page Text von Marianna
 
 gallery section:
 - Fotos von Marianna
-- custom styles aus node-modules in eigenen Code übertragen
 
 shop section:
 - modal Formular mit netlify form
 - telegram bot
-- Sprachen hinzufügen
-
-
-

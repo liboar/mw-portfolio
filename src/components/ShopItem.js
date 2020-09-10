@@ -36,12 +36,13 @@ const ShopItem = ({
             <CardTitle
               style={{ fontFamily: '"Prata", serif', fontSize: "1.4rem" }}
             >
-              {description}
+              {description} {size}
             </CardTitle>
-            <CardSubtitle>
-              {size}, {material}, {technique}{" "}
-            </CardSubtitle>
-            <CardText>{price} &#8381;</CardText>
+            <CardSubtitle>{material}</CardSubtitle>
+            <CardText>
+              <div>{technique}</div>
+              {price} &#8381;
+            </CardText>
 
             <ShopItemModal
               fluid={fluid}
