@@ -66,16 +66,16 @@ const Shop = () => {
         data-sal-easing="ease"
       >
         <form
-          name="shop"
+          name="Shop Form"
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           hidden
         >
           {/* You still need to add the hidden input with the form name to your JSX form */}
-          <input type="hidden" name="form-name" value="shop" />
+          <input type="hidden" name="form-name" value="Shop Form" />
           <input
-            type="phone"
+            type="text"
             name="phone"
             id="phone"
             placeholder="Ihre

@@ -29,12 +29,12 @@ const ShopItemForm = props => {
   return (
     <>
       <AvForm
-        name="shop"
+        name="Shop Form"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="shop" />
+        <input type="hidden" name="form-name" value="Shop Form" />
         <ModalBody>
           <Row>
             <Col md={8}>
@@ -63,7 +63,6 @@ const ShopItemForm = props => {
                   <AvField
                     type="text"
                     name="name"
-                    id="name"
                     label="Name"
                     required
                     validate={{
@@ -91,7 +90,6 @@ const ShopItemForm = props => {
                   <AvField
                     type="text"
                     name="phone"
-                    id="phone"
                     label="Phone number"
                     required
                     validate={{
