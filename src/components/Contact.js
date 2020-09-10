@@ -19,7 +19,7 @@ const Contact = () => {
         >
           <div>
             <form
-              name="contact"
+              name="shop"
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
@@ -27,6 +27,13 @@ const Contact = () => {
             >
               {/* You still need to add the hidden input with the form name to your JSX form */}
               <input type="hidden" name="form-name" value="contact" />
+              <input
+                type="phone"
+                name="phone"
+                id="phone"
+                placeholder="Ihre
+              Mobilfunknummer"
+              />{" "}
               ...
             </form>
 
