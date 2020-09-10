@@ -65,18 +65,19 @@ const Shop = () => {
         data-sal-delay="100"
         data-sal-easing="ease"
       >
-        {/* <form
+        <form
           name="Shop Form"
           method="post"
           netlify
           data-netlify-honeypot="bot-field"
           hidden
+          onSubmit="submit"
         >
           <input type="hidden" name="form-name" value="Shop Form" />
           <input type="text" name="phone" />
           <input type="text" name="name" />
           <input type="text" name="shopItem" />
-        </form> */}
+        </form>
         <Carousel
           responsive={responsive}
           additionalTransfrom={0}
