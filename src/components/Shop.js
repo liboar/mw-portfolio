@@ -82,7 +82,7 @@ const Shop = () => {
               Mobilfunknummer"
           />
           <input
-            type="name"
+            type="text"
             name="name"
             id="name"
             placeholder="Ihre

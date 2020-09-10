@@ -61,10 +61,7 @@ const ShopItemForm = props => {
                     you as soon as possible.
                   </p>
                   <AvField
-                    id="right"
-                    name="name"
                     type="text"
-                    type="name"
                     name="name"
                     id="name"
                     label="Name"
@@ -92,10 +89,7 @@ const ShopItemForm = props => {
                     }}
                   />
                   <AvField
-                    id="right"
-                    name="phone"
                     type="text"
-                    type="phone"
                     name="phone"
                     id="phone"
                     label="Phone number"
