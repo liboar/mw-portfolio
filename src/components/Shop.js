@@ -68,7 +68,7 @@ const Shop = () => {
         <form
           name="Shop Form"
           method="post"
-          netlify
+          data-netlify="true"
           data-netlify-honeypot="bot-field"
           hidden
           onSubmit="submit"
@@ -77,6 +77,7 @@ const Shop = () => {
           <input type="text" name="phone" />
           <input type="text" name="name" />
           <input type="text" name="shopItem" />
+          <button type="submit"></button>
         </form>
         <Carousel
           responsive={responsive}
