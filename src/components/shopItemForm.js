@@ -3,23 +3,24 @@ import Img from "gatsby-image"
 
 import {
   Button,
-  Form,
   FormGroup,
-  Label,
   Input,
+  Label,
   Row,
   Col,
   ModalFooter,
   ModalBody,
 } from "reactstrap"
+import { AvForm, AvField } from "availity-reactstrap-validation"
 
 const ShopItemForm = props => {
   const { price, description, type, fluid, key, size, toggle } = props
 
   return (
     <>
-      <Form
+      <AvForm
         name="shop"
+        sssadasdasdasdasdasdasdasdsad
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
@@ -27,28 +28,36 @@ const ShopItemForm = props => {
         <input type="hidden" name="form-name" value="shop" />
         <ModalBody style={{ textAlign: "right" }}>
           <div className="shopFormSummary">
-            <FormGroup>
-              <Input type="select" name="select" id="exampleSelect">
-                <option>
-                  {description} {size} {type}
-                  shopping checkout form
-                </option>
-              </Input>
-              <div>{price} &#8381;</div>
-            </FormGroup>
-            <FormGroup
-              id="right"
-              style={{ alignSelf: "right", paddingTop: "1rem" }}
-            >
-              <div>
-                <Input
-                  type="phone"
-                  name="phone"
-                  id="phone"
-                  placeholder="Ihre Mobilfunknummer"
-                />
-              </div>
-            </FormGroup>
+            <AvField
+              name="phone"
+              type="text"
+              type="phone"
+              name="phone"
+              id="phone"
+              label="Phone Number"
+              required
+              validate={{
+                required: {
+                  value: true,
+                  errorMessage: "Please enter valid phone number",
+                },
+                pattern: {
+                  value: "^[0-9]*$",
+                  errorMessage:
+                    "Your number must be composed only with numbers",
+                },
+                minLength: {
+                  value: 6,
+                  errorMessage:
+                    "Your number must be between 6 and 16 characters",
+                },
+                maxLength: {
+                  value: 16,
+                  errorMessage:
+                    "Your number must be between 6 and 16 characters",
+                },
+              }}
+            />
           </div>
         </ModalBody>
         <ModalBody>
@@ -67,7 +76,7 @@ const ShopItemForm = props => {
             Abbrechen
           </Button>
         </ModalFooter>
-      </Form>
+      </AvForm>
     </>
   )
 }

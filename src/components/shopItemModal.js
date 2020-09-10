@@ -16,7 +16,7 @@ const ShopItemModal = props => {
         <Trans>order</Trans>
       </Button>
       <Modal isOpen={modal} toggle={toggle} className="customModal" size="lg">
-        <ModalHeader toggle={toggle}>Ihre Bestellung</ModalHeader>
+        <ModalHeader toggle={toggle}></ModalHeader>
 
         <ShopItemForm
           fluid={fluid}
