@@ -89,6 +89,7 @@ const Shop = () => {
             ) : (
               <ShopItem
                 key={node.strapiId}
+                propKey={node.strapiId}
                 description={node.description}
                 price={node.price}
                 material={node.material}

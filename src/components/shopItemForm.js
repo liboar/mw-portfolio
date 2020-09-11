@@ -1,40 +1,50 @@
-import React from "react"
+import React, { useState } from "react"
 import Img from "gatsby-image"
+import axios from "axios"
 
-import {
-  Button,
-  FormGroup,
-  Input,
-  Label,
-  Row,
-  Col,
-  ModalFooter,
-  ModalBody,
-} from "reactstrap"
+import { Button, Row, Col, ModalFooter, ModalBody } from "reactstrap"
 import { AvForm, AvField } from "availity-reactstrap-validation"
+import { useAlert } from "react-alert"
 
 const ShopItemForm = props => {
-  const {
-    price,
-    description,
-    type,
-    fluid,
-    key,
-    size,
-    toggle,
-    material,
-    technique,
-  } = props
+  const { price, description, fluid, toggle, type } = props
+
+  const [personalData, setPersonalData] = useState({})
+
+  const alert = useAlert()
 
   return (
     <>
       <AvForm
-        name="Shop Form"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        // name="Shop Form"
+        // method="post"
+        // data-netlify="true"
+        // data-netlify-honeypot="bot-field"
+        onValidSubmit={e => {
+          e.preventDefault()
+
+          axios
+            .post("/.netlify/functions/notifyTelegram", {
+              item: { description },
+              type: { type },
+              ...personalData,
+            })
+
+            .then(res => {
+              setPersonalData()
+              props.toggle()
+            })
+            .then(() => {
+              alert.show(
+                "Thank your for your order! I will soon contact you.",
+                {
+                  title: "Order successful",
+                }
+              )
+            })
+            .catch(err => console.log(err))
+        }}
       >
-        <input type="hidden" name="form-name" value="Shop Form" />
         <ModalBody>
           <Row>
             <Col md={8}>
@@ -51,9 +61,13 @@ const ShopItemForm = props => {
                 <h3>Your order:</h3>
                 <div className="shopFormSummaryOrder">
                   <div className="bold">
-                    1 x <label className="capitalize">{description}</label>
+                    1 x <span className="capitalize">{description}:</span>
                   </div>
-                  <div>{price} &#8381;</div>
+                  <div id="right">{price} &#8381;</div>
+                  <div className="bold">
+                    <span>Пересылка в России:</span>
+                  </div>
+                  <div id="right">0 &#8381;</div>
                 </div>
                 <div className="shopFormSummaryInformation">
                   <p>
@@ -63,8 +77,11 @@ const ShopItemForm = props => {
 
                   <AvField
                     type="text"
-                    name="name"
                     label="Name"
+                    name="name"
+                    onChange={e =>
+                      setPersonalData({ ...personalData, name: e.target.value })
+                    }
                     required
                     validate={{
                       required: {
@@ -92,6 +109,12 @@ const ShopItemForm = props => {
                     type="text"
                     name="phone"
                     label="Phone number"
+                    onChange={e =>
+                      setPersonalData({
+                        ...personalData,
+                        phone: e.target.value,
+                      })
+                    }
                     required
                     validate={{
                       required: {
@@ -119,6 +142,12 @@ const ShopItemForm = props => {
                     type="text"
                     name="shopItem"
                     value={description}
+                    onChange={e =>
+                      setPersonalData({
+                        ...personalData,
+                        item: e.target.value,
+                      })
+                    }
                     hidden
                   />
                 </div>
@@ -127,6 +156,7 @@ const ShopItemForm = props => {
           </Row>
         </ModalBody>
         <ModalFooter>
+          <div>{toggle.successMsg}</div>
           <Button color="primary">Bestellung senden</Button>
           <Button color="secondary" onClick={toggle}>
             Abbrechen

@@ -27,13 +27,18 @@
   .bold {
     font-weight: bold;
   }
+  #right {
+    text-align: right;
+  }
 }
 
 .shopFormSummaryOrder {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 3rem;
+  justify-content: space-around;
+  > div {
+    flex: 0 50%;
+  }
 }
 
 .shopFormSummaryInformation {

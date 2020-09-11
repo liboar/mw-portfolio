@@ -1,6 +1,5 @@
 import React from "react"
 import { FaInstagram } from "react-icons/fa"
-import { Link } from "gatsby"
 
 import { Trans } from "gatsby-plugin-react-i18next"
 

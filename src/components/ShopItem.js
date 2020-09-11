@@ -10,18 +10,20 @@ import {
 } from "reactstrap"
 import ShopItemModal from "./shopItemModal"
 
-const ShopItem = ({
-  key,
-  description,
-  price,
-  material,
-  type,
-  technique,
-  size,
-  fluid,
-}) => {
+const ShopItem = props => {
+  const {
+    propKey,
+    description,
+    price,
+    material,
+    type,
+    technique,
+    size,
+    fluid,
+  } = props
+
   return (
-    <div key={key}>
+    <div key={propKey}>
       <Card className="shopCard">
         <Col style={{ padding: "0" }}>
           <Img
@@ -40,7 +42,7 @@ const ShopItem = ({
             </CardTitle>
             <CardSubtitle>{material}</CardSubtitle>
             <CardText>
-              <div>{technique}</div>
+              <label>{technique}</label>
               {price} &#8381;
             </CardText>
             <form
@@ -59,7 +61,8 @@ const ShopItem = ({
               fluid={fluid}
               description={description}
               price={price}
-              key={key}
+              key={propKey}
+              propKey={propKey}
               type={type}
               size={size}
               material={material}

@@ -9,7 +9,7 @@ const ShopItemModal = props => {
     description,
     type,
     fluid,
-    key,
+    propKey,
     size,
     material,
     technique,
@@ -21,17 +21,18 @@ const ShopItemModal = props => {
 
   return (
     <div>
+      <div>{toggle.successMsg}</div>
       <Button color="danger" onClick={toggle} className="workButton">
         <Trans>order</Trans>
       </Button>
       <Modal isOpen={modal} toggle={toggle} className="customModal" size="xl">
-        <ModalHeader toggle={toggle}></ModalHeader>
+        <ModalHeader toggle={toggle}> </ModalHeader>
 
         <ShopItemForm
           fluid={fluid}
           description={description}
           price={price}
-          key={key}
+          key={propKey}
           type={type}
           toggle={toggle}
           size={size}

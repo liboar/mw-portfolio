@@ -1,4 +1,18 @@
+const { createProxyMiddleware } = require("http-proxy-middleware")
+
 module.exports = {
+  developMiddleware: app => {
+    app.use(
+      "/.netlify/functions",
+      createProxyMiddleware({
+        target: "http://localhost:9000",
+        pathRewrite: {
+          "/.netlify/functions/": "",
+        },
+      })
+    )
+  },
+
   siteMetadata: {
     title: `Ikhmalian Photography`,
     description: `A portfolio website for analog photography`,

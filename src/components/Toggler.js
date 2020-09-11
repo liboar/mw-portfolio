@@ -22,7 +22,7 @@ function Toggler(props) {
         </DropdownToggle>
         <DropdownMenu right>
           {languages.map(lng => (
-            <Link to={"/"} language={lng}>
+            <Link to={"/"} language={lng} key={lng}>
               <DropdownItem key={lng}>
                 <Trans>{lng}</Trans>
               </DropdownItem>

@@ -1,10 +1,8 @@
 allgemein:
-- optionale Schriften prüfen
 - about page Text von Marianna
 
 gallery section:
 - Fotos von Marianna
 
 shop section:
-- modal Formular mit netlify form
-- telegram bot
+- modal Formular mit netlify form / telegram bot
