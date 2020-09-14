@@ -20,7 +20,7 @@ const About = () => {
 
   const aboutImage = data.file.childImageSharp.fluid
   return (
-    <Container id="about" className="section themed-container" fluid="lg">
+    <Container id="about" className="aboutSection themed-container" fluid="lg">
       <div className="flexContainer">
         <div className="image flexItem">
           <Img alt="no img" fluid={aboutImage} />
