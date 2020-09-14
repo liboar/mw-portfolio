@@ -30,7 +30,11 @@ const Contact = () => {
         >
           <div>
             <Row>
-              <Col lg={{ size: 6, offset: 3 }}>
+              <Col
+                lg={{ size: 6, offset: 3 }}
+                sm={{ size: 8, offset: 2 }}
+                xs="12"
+              >
                 <AvForm
                   name="Contact Form"
                   className="contactForm"
@@ -106,7 +110,7 @@ const Contact = () => {
                       type="textarea"
                       name="message"
                       id="message"
-                      rows="5"
+                      rows="3"
                       required
                       errorMessage={t("errorValidMessage")}
                       placeholder={t("yourMessage")}
