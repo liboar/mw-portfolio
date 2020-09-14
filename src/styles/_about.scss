@@ -43,6 +43,21 @@
   }
 }
 
+@media screen and (max-width: 1196px) {
+  .aboutSection {
+    padding: 2rem;
+  }
+  .fl .flexContainer {
+    margin: 2rem 3%;
+  }
+  .image {
+    width: 32%;
+  }
+  .cv {
+    width: 62%;
+  }
+}
+
 @media screen and (max-width: 1025px) {
   .aboutSection {
     padding: 3rem;
@@ -74,7 +89,7 @@
 
     p {
       font-size: 14pt;
-      line-height: 23pt;
+      line-height: 20pt;
       margin-bottom: 1rem;
     }
   }
