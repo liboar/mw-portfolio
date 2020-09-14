@@ -3,7 +3,6 @@ allgemein:
 
 gallery section:
 - Fotos von Marianna
-- pfeile kleiner
 
 SEO, GOOGLE ANALYTICS
 
