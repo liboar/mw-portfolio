@@ -25,7 +25,7 @@ const Contact = () => {
           style={{
             position: "relative",
             top: "50%",
-            transform: "translateY(-60%)",
+            transform: "translateY(-50%)",
           }}
         >
           <div>
