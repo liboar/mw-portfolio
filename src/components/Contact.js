@@ -1,11 +1,22 @@
-import React from "react"
+import React, { useState } from "react"
 import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap"
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
+import { AvForm, AvField } from "availity-reactstrap-validation"
+import { useAlert } from "react-alert"
+import axios from "axios"
 
 // import messageHandler from "../../bot"
 
 const Contact = () => {
+  const [contactData, setContactData] = useState({})
+  const alert = useAlert()
+
   const { t } = useTranslation()
+
+  const messageThankyou = t("messageThankyou")
+  const messageSuccessful = t("messageSuccessful")
+  const alertOk = t("alertOk")
+
   return (
     <>
       <section id="contact" className="contactSection">
@@ -20,68 +31,104 @@ const Contact = () => {
           <div>
             <Row>
               <Col lg={{ size: 6, offset: 3 }}>
-                <Form
+                <AvForm
                   name="Contact Form"
-                  method="POST"
-                  data-netlify-honeypot="bot-field"
-                  data-netlify="true"
                   className="contactForm"
-                  data-sal="slide-up"
-                  data-sal-duration="400"
-                  data-sal-delay="100"
-                  data-sal-easing="ease"
+                  onValidSubmit={e => {
+                    e.preventDefault()
+                    setContactData({ loading: true })
+
+                    axios
+                      .post("/.netlify/functions/notifyTelegram", {
+                        ...contactData,
+                      })
+                      .then(() => {
+                        alert.show(messageThankyou, {
+                          title: messageSuccessful,
+                          closeCopy: alertOk,
+                        })
+                      })
+                      .then(() => {
+                        setContactData({
+                          loading: false,
+                          contactName: "",
+                          email: "",
+                          message: "",
+                        })
+                      })
+                      .catch(err => console.log(err))
+                  }}
                 >
-                  <input type="hidden" name="form-name" value="Contact Form" />
-                  <FormGroup>
-                    <FormGroup>
-                      <Label for="name" className="contactLabel">
-                        <Trans>name</Trans>
-                      </Label>
-                      <Input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder={t("yourName")}
-                      />
-                    </FormGroup>
+                  <FormGroup className="contactFormGroup">
+                    <Label for="name" className="contactLabel">
+                      <Trans>name</Trans>
+                    </Label>
+                    <AvField
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder={t("yourName")}
+                      required
+                      errorMessage={t("errorValidName")}
+                      onChange={e =>
+                        setContactData({
+                          ...contactData,
+                          contactName: e.target.value,
+                        })
+                      }
+                    />
+                  </FormGroup>
+                  <FormGroup className="contactFormGroup">
                     <Label for="exampleEmail" className="contactLabel">
                       <Trans>email</Trans>
                     </Label>
-                    <Input
+                    <AvField
+                      type="email"
+                      required
+                      errorMessage={t("errorValidEmail")}
                       type="email"
                       name="email"
                       id="exampleEmail"
                       placeholder={t("yourEmail")}
+                      onChange={e =>
+                        setContactData({
+                          ...contactData,
+                          email: e.target.value,
+                        })
+                      }
                     />
                   </FormGroup>
-                  <FormGroup>
-                    <Label for="subject" className="contactLabel">
-                      <Trans>subject</Trans>
-                    </Label>
-                    <Input
-                      type="text"
-                      name="subject"
-                      id="subject"
-                      placeholder={t("yourNumber")}
-                    />
-                  </FormGroup>
-
-                  <FormGroup>
+                  <FormGroup className="contactFormGroup">
                     <Label for="exampleText" className="contactLabel">
                       <Trans>message</Trans>
                     </Label>
-                    <Input
+                    <AvField
                       type="textarea"
                       name="message"
                       id="message"
                       rows="5"
+                      required
+                      errorMessage={t("errorValidMessage")}
                       placeholder={t("yourMessage")}
+                      onChange={e =>
+                        setContactData({
+                          ...contactData,
+                          message: e.target.value,
+                        })
+                      }
                     />
                   </FormGroup>
-                  <Button className="workButton">
-                    <Trans>submit</Trans>
+                  <Button
+                    className="workButton"
+                    disabled={contactData.loading === true}
+                  >
+                    {contactData.loading ? (
+                      <Trans>sending</Trans>
+                    ) : (
+                      <Trans>submit</Trans>
+                    )}
                   </Button>
-                </Form>
+                </AvForm>
               </Col>
             </Row>
           </div>

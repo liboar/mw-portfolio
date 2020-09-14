@@ -39,11 +39,16 @@ const ShopItem = props => {
               style={{ fontFamily: '"Prata", serif', fontSize: "1.4rem" }}
             >
               {description} {size}
+              <hr />
             </CardTitle>
-            <CardSubtitle>{material}</CardSubtitle>
-            <CardText>
+
+            <CardText>{material}</CardText>
+            {/* <CardText>
               <label>{technique}</label>
-              {price} &#8381;
+            </CardText> */}
+            <CardText>
+              {" "}
+              <label> {price} &#8381;</label>
             </CardText>
             <form
               name="Shop Form"

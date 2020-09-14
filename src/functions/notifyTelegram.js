@@ -5,7 +5,7 @@ export function handler(event, context, callback) {
 
   axios
     .post("https://v1.nocodeapi.com/lachman645/telegram/lqUEZccVgmyLCPXs", {
-      text: `Name: ${receivedBody.name}, phone: ${receivedBody.phone}, type: ${receivedBody.type.type} item: ${receivedBody.item.description}`,
+      text: `Name: ${receivedBody.contactName}, email: ${receivedBody.email}, message: ${receivedBody.message}`,
     })
 
     // console

@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Img from "gatsby-image"
 import axios from "axios"
+import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
 
 import { Button, Row, Col, ModalFooter, ModalBody } from "reactstrap"
 import { AvForm, AvField } from "availity-reactstrap-validation"
@@ -13,6 +14,18 @@ const ShopItemForm = props => {
 
   const alert = useAlert()
 
+  const { t } = useTranslation()
+  const errorValidName = t("errorValidName")
+  const errorOnlyLetters = t("errorOnlyLetters")
+  const errorMoreThan = t("errorMoreThan")
+  const errorLessThan = t("errorLessThan")
+  const errorValidNumber = t("errorValidNumber")
+  const errorOnlyNumerals = t("errorOnlyNumerals")
+
+  const orderThankYou = t("orderThankYou")
+  const orderSuccessful = t("orderSuccessful")
+  const alertOk = t("alertOk")
+
   return (
     <>
       <AvForm
@@ -22,6 +35,7 @@ const ShopItemForm = props => {
         // data-netlify-honeypot="bot-field"
         onValidSubmit={e => {
           e.preventDefault()
+          setPersonalData({ loading: true })
 
           axios
             .post("/.netlify/functions/notifyTelegram", {
@@ -31,17 +45,20 @@ const ShopItemForm = props => {
             })
 
             .then(res => {
-              setPersonalData()
               props.toggle()
             })
             .then(() => {
-              alert.show(
-                "Thank your for your order! I will soon contact you.",
-                {
-                  title: "Order successful",
-                }
-              )
+              setPersonalData({
+                loading: false,
+              })
             })
+            .then(() => {
+              alert.show(orderThankYou, {
+                title: orderSuccessful,
+                closeCopy: alertOk,
+              })
+            })
+
             .catch(err => console.log(err))
         }}
       >
@@ -58,26 +75,24 @@ const ShopItemForm = props => {
             </Col>
             <Col md={4}>
               <div className="shopFormSummary">
-                <h3>Your order:</h3>
+                <h3>
+                  <Trans>yourOrder</Trans>
+                </h3>
                 <div className="shopFormSummaryOrder">
                   <div className="bold">
                     1 x <span className="capitalize">{description}:</span>
                   </div>
                   <div id="right">{price} &#8381;</div>
-                  <div className="bold">
-                    <span>Пересылка в России:</span>
-                  </div>
-                  <div id="right">0 &#8381;</div>
                 </div>
-                <div className="shopFormSummaryInformation">
-                  <p>
-                    Please type in your credentials. I will get in contact with
-                    you as soon as possible.
-                  </p>
+                <p className="bold">
+                  <Trans>destinationCosts</Trans>
+                </p>
+                <hr />
 
+                <div className="shopFormSummaryInformation">
                   <AvField
                     type="text"
-                    label="Name"
+                    label={t("yourName")}
                     name="name"
                     onChange={e =>
                       setPersonalData({ ...personalData, name: e.target.value })
@@ -86,29 +101,26 @@ const ShopItemForm = props => {
                     validate={{
                       required: {
                         value: true,
-                        errorMessage: "Please enter valid name",
+                        errorMessage: errorValidName,
                       },
                       pattern: {
                         value: "^[a-zA-ZЯа-я_]+( [a-zA-ZЯа-я_]+)*$",
-                        errorMessage:
-                          "Your number must be composed only with letters",
+                        errorMessage: errorOnlyLetters,
                       },
                       minLength: {
                         value: 4,
-                        errorMessage:
-                          "Your number must be longer than 3 charakters",
+                        errorMessage: errorMoreThan,
                       },
                       maxLength: {
                         value: 25,
-                        errorMessage:
-                          "Your number must be shorter than 25 characters",
+                        errorMessage: errorLessThan,
                       },
                     }}
                   />
                   <AvField
                     type="text"
                     name="phone"
-                    label="Phone number"
+                    label={t("yourNumber")}
                     onChange={e =>
                       setPersonalData({
                         ...personalData,
@@ -119,22 +131,19 @@ const ShopItemForm = props => {
                     validate={{
                       required: {
                         value: true,
-                        errorMessage: "Please enter valid phone number",
+                        errorMessage: errorValidNumber,
                       },
                       pattern: {
                         value: "^[0-9]*$",
-                        errorMessage:
-                          "Your number must be composed only with numbers",
+                        errorMessage: errorOnlyNumerals,
                       },
                       minLength: {
                         value: 6,
-                        errorMessage:
-                          "Your number must be between 6 and 16 characters",
+                        errorMessage: errorMoreThan,
                       },
                       maxLength: {
                         value: 16,
-                        errorMessage:
-                          "Your number must be between 6 and 16 characters",
+                        errorMessage: errorLessThan,
                       },
                     }}
                   />
@@ -151,15 +160,32 @@ const ShopItemForm = props => {
                     hidden
                   />
                 </div>
+                <hr />
+                <div className="disclaimer">
+                  <p>
+                    <Trans>credentials</Trans>
+                    <br />
+                    <Trans>dataPrivacy</Trans>
+                  </p>
+                </div>
               </div>
             </Col>
           </Row>
         </ModalBody>
         <ModalFooter>
-          <div>{toggle.successMsg}</div>
-          <Button color="primary">Bestellung senden</Button>
-          <Button color="secondary" onClick={toggle}>
-            Abbrechen
+          <Button color="primary" disabled={personalData.loading === true}>
+            {personalData.loading ? (
+              <Trans>sending</Trans>
+            ) : (
+              <Trans>submit</Trans>
+            )}
+          </Button>
+          <Button
+            color="secondary"
+            onClick={toggle}
+            disabled={personalData.loading === true}
+          >
+            <Trans>cancel</Trans>
           </Button>
         </ModalFooter>
       </AvForm>
