@@ -36,8 +36,7 @@
     letter-spacing: 0.5rem;
   }
 }
-
-@include media-breakpoint-up(xs) {
+@include media-breakpoint-down(sm) {
   .titles {
     .title {
       font-size: 3em;
