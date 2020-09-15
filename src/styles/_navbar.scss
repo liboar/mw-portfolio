@@ -29,3 +29,25 @@
   color: $dark-text;
   border-bottom: solid $dark-text 2px;
 }
+
+@include media-breakpoint-up(md) {
+  .navlink {
+    font-size: 1rem;
+  }
+}
+@include media-breakpoint-up(sm) {
+  .navlink {
+    font-size: 1rem;
+  }
+  .navbar {
+    line-height: 2rem;
+  }
+}
+@include media-breakpoint-up(xs) {
+  .navlink {
+    font-size: 1rem;
+  }
+  .navbar {
+    line-height: 2rem;
+  }
+}
