@@ -1,11 +1,7 @@
 allgemein:
 - anderes Foto
 
-gallery section:
-- Fotos von Marianna
-
-SEO, GOOGLE ANALYTICS
-
+SEO, GOOGLE ANALYTICS, DOMAIN
 
 Меня зовут Марианна, я родилась и живу в Москве.
 В 2019 году я закончила Московский Архитектурный Институт.

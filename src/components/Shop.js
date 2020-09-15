@@ -60,10 +60,6 @@ const Shop = () => {
           top: "50%",
           transform: "translateY(-50%)",
         }}
-        data-sal="slide-up"
-        data-sal-duration="400"
-        data-sal-delay="100"
-        data-sal-easing="ease"
       >
         <Carousel
           responsive={responsive}

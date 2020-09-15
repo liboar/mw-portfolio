@@ -12,7 +12,7 @@ import Shop from "../components/Shop"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
-const IndexPage = () => {
+const IndexPage = ({ title }) => {
   const options = {
     // you can also just use 'bottom center'
     position: positions.TOP,
@@ -23,7 +23,19 @@ const IndexPage = () => {
   return (
     <Provider template={AlertMUITemplate} {...options}>
       <Layout>
-        <SEO title="Home" keywords={[`gatsby`, `photography`, `ikhmalian`]} />
+        <SEO
+          title=" "
+          keywords={[
+            `фотография`,
+            `Ихмальян`,
+            `Марианна`,
+            `Москва`,
+            `photography`,
+            `Ikhmalian`,
+            `Marianna`,
+            `Moscow`,
+          ]}
+        />
         <Hero />
         <About />
         <Gallery />

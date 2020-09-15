@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Container, Button } from "reactstrap"
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
 
 const About = () => {
@@ -20,18 +19,25 @@ const About = () => {
 
   const aboutImage = data.file.childImageSharp.fluid
   return (
-    <Container id="about" className="aboutSection themed-container" fluid="lg">
-      <div className="flexContainer">
-        <div className="image flexItem">
+    <div id="about" className="aboutSection container-lg">
+      <div
+        className="flexContainer row"
+        style={{
+          position: "relative",
+          top: "50%",
+          transform: "translateY(-50%)",
+        }}
+      >
+        <div className="image col-4 d-none d-sm-block">
           <Img alt="no img" fluid={aboutImage} />
         </div>
-        <div className="cv flexItem">
-          <div>
-            <h1 className="aboutMainTitle">
+        <div className="cv col-lg-6 col-md-6 col-sm-12">
+          <div className="d-none d-sm-block">
+            <h1 className="aboutMainTitle ">
               <Trans>title</Trans>
             </h1>
           </div>
-          <div>
+          <div className="aboutParagraphOne d-none d-sm-block">
             <p>
               <Trans>aboutParagraphOne</Trans>
             </p>
@@ -69,10 +75,9 @@ const About = () => {
               <Trans>aboutParagraphFour</Trans>
             </p>
           </div>
-          <div> </div>
         </div>
       </div>
-    </Container>
+    </div>
   )
 }
 
