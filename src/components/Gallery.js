@@ -17,7 +17,14 @@ const Gallery = () => {
 
         return (
           <section id="gallery" className="section">
-            <div className="imageGallery container">
+            <div
+              className="imageGallery container"
+              style={{
+                position: "relative",
+                top: "50%",
+                transform: "translateY(-50%)",
+              }}
+            >
               <ImageGallery
                 items={images}
                 thumbnailPosition="bottom"
