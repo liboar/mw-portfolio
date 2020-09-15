@@ -2,7 +2,23 @@
   margin: auto;
   padding-top: auto;
   font-family: $text-font;
+}
 
+@include media-breakpoint-up(xs) {
+  h1 {
+    font-weight: 200;
+    font-size: 3.5rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 0.9rem;
+    padding-bottom: 0rem;
+  }
+}
+@include media-breakpoint-up(sm) {
   h1 {
     font-weight: 200;
     font-size: 3.5rem;
@@ -14,5 +30,35 @@
   p {
     font-size: 1rem;
     padding-bottom: 0.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  h1 {
+    font-weight: 200;
+    font-size: 3.5rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1rem;
+    padding-bottom: 0.2rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  h1 {
+    font-weight: 200;
+    font-size: 4rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
   }
 }
