@@ -15,7 +15,7 @@ module.exports = {
 
   siteMetadata: {
     title: `Ikhmalian Photography`,
-    description: `A portfolio website for analog photography`,
+    description: `Portfolio website of Marianna Ikhmalian for analog photography`,
     author: `B. Kawecki`,
     siteUrl: `http://localhost:8000/`,
   },

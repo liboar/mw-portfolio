@@ -24,7 +24,7 @@ const IndexPage = ({ title }) => {
     <Provider template={AlertMUITemplate} {...options}>
       <Layout>
         <SEO
-          title=" "
+          title="Ikhmalian Photography"
           keywords={[
             `фотография`,
             `Ихмальян`,
