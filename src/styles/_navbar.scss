@@ -1,3 +1,19 @@
+@include media-breakpoint-up(sm) {
+  .navlink {
+    font-size: 1rem;
+  }
+  .navbar {
+    line-height: 2rem;
+  }
+}
+@include media-breakpoint-up(xs) {
+  .navlink {
+    font-size: 1rem;
+  }
+  .navbar {
+    line-height: 2rem;
+  }
+}
 .navbar {
   background-color: white;
   // box-shadow: 1px 1px 1px $dark-text;
@@ -15,6 +31,7 @@
 .navlink {
   color: $dark-text;
   font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .isCurrent > a {
@@ -28,26 +45,4 @@
   // text-decoration-thickness: 2px;
   color: $dark-text;
   border-bottom: solid $dark-text 2px;
-}
-
-@include media-breakpoint-up(md) {
-  .navlink {
-    font-size: 1rem;
-  }
-}
-@include media-breakpoint-up(sm) {
-  .navlink {
-    font-size: 1rem;
-  }
-  .navbar {
-    line-height: 2rem;
-  }
-}
-@include media-breakpoint-up(xs) {
-  .navlink {
-    font-size: 1rem;
-  }
-  .navbar {
-    line-height: 2rem;
-  }
 }
