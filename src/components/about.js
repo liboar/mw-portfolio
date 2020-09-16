@@ -1,10 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
+import { Trans } from "gatsby-plugin-react-i18next"
 
 const About = () => {
-  const { t } = useTranslation()
   const data = useStaticQuery(graphql`
     {
       file(relativePath: { eq: "work-artist.png" }) {

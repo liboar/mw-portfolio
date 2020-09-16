@@ -1,13 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import {
-  Card,
-  CardText,
-  CardTitle,
-  CardSubtitle,
-  CardBody,
-  Col,
-} from "reactstrap"
+import { Card, CardText, CardTitle, CardBody, Col } from "reactstrap"
 import ShopItemModal from "./shopItemModal"
 
 const ShopItem = props => {

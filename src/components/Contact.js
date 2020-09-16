@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap"
+import { Button, FormGroup, Label, Row, Col } from "reactstrap"
 import { Trans, useTranslation } from "gatsby-plugin-react-i18next"
 import { AvForm, AvField } from "availity-reactstrap-validation"
 import { useAlert } from "react-alert"
@@ -90,7 +90,6 @@ const Contact = () => {
                       type="email"
                       required
                       errorMessage={t("errorValidEmail")}
-                      type="email"
                       name="email"
                       id="exampleEmail"
                       placeholder={t("yourEmail")}

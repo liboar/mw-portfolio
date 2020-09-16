@@ -18,7 +18,7 @@ function Toggler(props) {
       <Dropdown isOpen={dropdownOpen} toggle={toggle} className="toggler">
         <DropdownToggle caret tag="span">
           {" "}
-          <FaLanguage style={{ fontSize: "3rem" }} />
+          <FaLanguage style={{ fontSize: "2.5rem" }} />
         </DropdownToggle>
         <DropdownMenu right>
           {languages.map(lng => (
