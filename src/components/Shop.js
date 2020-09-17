@@ -52,7 +52,7 @@ const Shop = () => {
     },
   }
   return (
-    <div className="section" id="shop">
+    <div className="shopSection" id="shop">
       <div
         className="shop"
         style={{

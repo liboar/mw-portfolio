@@ -5,6 +5,10 @@
 }
 
 @include media-breakpoint-up(xs) {
+  .aboutSection {
+    height: calc(150vh);
+    padding: 2rem;
+  }
   .flexContainer {
     h1 {
       font-weight: 200;
@@ -21,6 +25,11 @@
   }
 }
 @include media-breakpoint-up(sm) {
+  .aboutSection {
+    height: calc(200vh);
+    padding: 2rem;
+  }
+
   .flexContainer {
     h1 {
       font-weight: 200;
@@ -38,6 +47,9 @@
 }
 
 @include media-breakpoint-up(md) {
+  .aboutSection {
+    height: calc(100vh);
+  }
   .flexContainer {
     h1 {
       font-weight: 200;

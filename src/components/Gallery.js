@@ -16,7 +16,7 @@ const Gallery = () => {
         })
 
         return (
-          <section id="gallery" className="section">
+          <section id="gallery" className="gallerySection">
             <div
               className="imageGallery container"
               style={{

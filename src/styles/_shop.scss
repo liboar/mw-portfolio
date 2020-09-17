@@ -1,4 +1,13 @@
-.customModal {
+@include media-breakpoint-up(xs) {
+  .shopSection {
+    padding: 2rem;
+    height: calc(150vh);
+  }
+}
+@include media-breakpoint-up(md) {
+  .shopSection {
+    height: calc(100vh);
+  }
 }
 
 .shopImage {

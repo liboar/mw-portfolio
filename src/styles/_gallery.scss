@@ -1,3 +1,21 @@
+@include media-breakpoint-up(xs) {
+  .gallerySection {
+    padding: 2rem;
+    height: calc(150vh);
+  }
+}
+@include media-breakpoint-up(sm) {
+  .gallerySection {
+    padding: 2rem;
+    height: calc(150vh);
+  }
+}
+@include media-breakpoint-up(md) {
+  .gallerySection {
+    height: calc(100vh);
+  }
+}
+
 #gallery {
   background-color: $dark-bg;
   padding-top: 6rem;

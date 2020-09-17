@@ -36,7 +36,7 @@ const About = () => {
               <Trans>title</Trans>
             </h1>
           </div>
-          <div className="aboutParagraphOne d-none d-sm-block">
+          <div className="aboutParagraphOne">
             <p>
               <Trans>aboutParagraphOne</Trans>
             </p>
