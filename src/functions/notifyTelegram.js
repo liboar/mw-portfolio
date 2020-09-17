@@ -6,7 +6,9 @@ export function handler(event, context, callback) {
 
   axios
     .post(process.env.NOCODEAPI, {
-      text: `Name: ${receivedBody.contactName}, email: ${receivedBody.email}, message: ${receivedBody.message}`,
+      name: `${receivedBody.contactName}`,
+      email: `${receivedBody.email}`,
+      message: `${receivedBody.message}`,
     })
 
     // console
