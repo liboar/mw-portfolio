@@ -1,10 +1,11 @@
 const axios = require("axios")
+require("dotenv").config()
 
 export function handler(event, context, callback) {
   const receivedBody = JSON.parse(event.body)
 
   axios
-    .post(NOCODEAPI, {
+    .post(process.env.NOCODEAPI, {
       text: `Name: ${receivedBody.contactName}, email: ${receivedBody.email}, message: ${receivedBody.message}`,
     })
 

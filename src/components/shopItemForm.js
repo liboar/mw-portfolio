@@ -59,7 +59,15 @@ const ShopItemForm = props => {
               })
             })
 
-            .catch(err => console.log(err))
+            .catch(err => {
+              setPersonalData({
+                loading: false,
+              })
+              alert.show(`${err}. \nPlease try again later.`, {
+                title: `SERVER ERROR`,
+                closeCopy: alertOk,
+              })
+            })
         }}
       >
         <ModalBody>

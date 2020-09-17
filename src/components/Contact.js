@@ -60,7 +60,15 @@ const Contact = () => {
                           message: "",
                         })
                       })
-                      .catch(err => console.log(err))
+                      .catch(err => {
+                        setContactData({
+                          loading: false,
+                        })
+                        alert.show(`${err}. \nPlease try again later.`, {
+                          title: `SERVER ERROR`,
+                          closeCopy: alertOk,
+                        })
+                      })
                   }}
                 >
                   <FormGroup className="contactFormGroup">
