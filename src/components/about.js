@@ -63,6 +63,7 @@ const About = () => {
               <Trans>aboutParagraphThree</Trans>
             </p>
           </div>
+
           <div>
             <h4>
               {" "}

@@ -4,7 +4,7 @@ export function handler(event, context, callback) {
   const receivedBody = JSON.parse(event.body)
 
   axios
-    .post("https://v1.nocodeapi.com/lachman645/telegram/lqUEZccVgmyLCPXs", {
+    .post(NOCODEAPI, {
       text: `Name: ${receivedBody.contactName}, email: ${receivedBody.email}, message: ${receivedBody.message}`,
     })
 
