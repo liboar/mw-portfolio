@@ -1,7 +1,13 @@
 @include media-breakpoint-up(xs) {
   .shopSection {
+    padding: 1rem;
+    height: calc(120vh);
+  }
+}
+@include media-breakpoint-up(sm) {
+  .shopSection {
     padding: 2rem;
-    height: calc(150vh);
+    height: calc(100vh);
   }
 }
 @include media-breakpoint-up(md) {

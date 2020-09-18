@@ -1,18 +1,52 @@
 @include media-breakpoint-up(xs) {
   .gallerySection {
-    padding: 2rem;
-    height: calc(150vh);
+    padding: 0rem;
+    height: calc(120vh);
+  }
+  .image-gallery-svg {
+    //CUSTOM STYLE height: 120ox, width: 60px
+    height: 40px !important;
+    width: 20px !important;
+  }
+  .image-gallery-thumbnail {
+    height: 60px !important;
+    width: auto !important;
+  }
+  .image-gallery-thumbnail-image {
+    //CUSTOM STYLE width: 100%
+    width: auto !important;
+    height: 50px !important;
   }
 }
+
 @include media-breakpoint-up(sm) {
   .gallerySection {
     padding: 2rem;
     height: calc(150vh);
   }
+  .image-gallery-svg {
+    //CUSTOM STYLE height: 120ox, width: 60px
+    height: 60px !important;
+    width: 40px !important;
+  }
 }
 @include media-breakpoint-up(md) {
   .gallerySection {
     height: calc(100vh);
+  }
+  .image-gallery-svg {
+    //CUSTOM STYLE height: 120ox, width: 60px
+    height: 80px !important;
+    width: 40px !important;
+  }
+  .image-gallery-thumbnail {
+    height: 120px !important;
+    width: auto !important;
+  }
+  .image-gallery-thumbnail-image {
+    //CUSTOM STYLE width: 100%
+    width: auto !important;
+    height: 100px !important;
   }
 }
 
@@ -26,16 +60,6 @@
   height: calc(80vh - 80px) !important; // 80 px for the thumbnail space
 }
 
-.image-gallery-thumbnail {
-  height: 120px !important;
-  width: auto !important;
-}
-.image-gallery-thumbnail-image {
-  //CUSTOM STYLE width: 100%
-  width: auto !important;
-  height: 100px !important;
-}
-
 @media (min-width: $ig-small-screen) {
   // Don't hover on screens smaller than small
   &:hover {
@@ -43,10 +67,4 @@
       transform: scale(1) !important;
     }
   }
-}
-
-.image-gallery-svg {
-  //CUSTOM STYLE height: 120ox, width: 60px
-  height: 80px !important;
-  width: 40px !important;
 }

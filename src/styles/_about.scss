@@ -7,7 +7,7 @@
 @include media-breakpoint-up(xs) {
   .aboutSection {
     height: calc(150vh);
-    padding: 2rem;
+    padding: 0.5rem;
   }
   .flexContainer {
     h1 {
@@ -22,11 +22,16 @@
       font-size: 0.9rem;
       padding-bottom: 0rem;
     }
+    .image {
+      margin: auto;
+      padding-bottom: 0.5rem;
+      max-width: 200px;
+    }
   }
 }
 @include media-breakpoint-up(sm) {
   .aboutSection {
-    height: calc(200vh);
+    height: calc(150vh);
     padding: 2rem;
   }
 
@@ -61,7 +66,11 @@
     }
     p {
       font-size: 1.2rem;
-      padding-bottom: 0.2rem;
+      padding-bottom: 0rem;
+    }
+    .image {
+      margin: 0;
+      padding-bottom: 0;
     }
   }
 }

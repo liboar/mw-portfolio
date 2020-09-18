@@ -1,6 +1,7 @@
 @include media-breakpoint-up(xs) {
   .contactSection {
-    height: calc(100vh);
+    height: calc(120vh);
+    padding: 2rem 0;
   }
   .contactLabel {
     font-weight: 600;
@@ -18,7 +19,7 @@
 
 @include media-breakpoint-up(sm) {
   .contactSection {
-    height: calc(150vh);
+    height: calc(100vh);
   }
 }
 @include media-breakpoint-up(md) {

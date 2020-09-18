@@ -27,3 +27,11 @@ header {
   height: calc(100vh);
   padding: 5rem 0 2rem;
 }
+
+.sectionTitle {
+  font-family: $headline-font;
+  text-transform: capitalize;
+  text-align: center;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}

@@ -4,6 +4,7 @@ import ShopItem from "./ShopItem"
 import Carousel from "react-multi-carousel"
 import "../../node_modules/react-multi-carousel/lib/styles.css"
 import { I18nextContext } from "gatsby-plugin-react-i18next"
+import { Trans } from "gatsby-plugin-react-i18next"
 
 const Shop = () => {
   const { language } = React.useContext(I18nextContext)
@@ -61,6 +62,11 @@ const Shop = () => {
           transform: "translateY(-50%)",
         }}
       >
+        <div className="d-sm-block d-md-none">
+          <h2 className="sectionTitle">
+            <Trans>shop</Trans>
+          </h2>
+        </div>
         <Carousel
           responsive={responsive}
           additionalTransfrom={0}
