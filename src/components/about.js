@@ -27,10 +27,10 @@ const About = () => {
           transform: "translateY(-50%)",
         }}
       >
-        <div className="image col-xs-3 col-sm-3 col-md-4">
+        <div className="image col-xs-3 col-sm-3 col-md-4 col-lg-4 col-xl-5">
           <Img alt="no img" fluid={aboutImage} />
         </div>
-        <div className="cv col-lg-8 col-md-8 col-sm-12">
+        <div className="cv col-xl-7 col-lg-8 col-md-8 col-sm-12">
           <div className="d-none d-sm-block">
             <h1 className="aboutMainTitle ">
               <Trans>title</Trans>
