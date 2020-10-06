@@ -18,6 +18,7 @@ module.exports = {
     description: `Portfolio website of Marianna Ikhmalian for analog photography`,
     author: `B. Kawecki`,
     siteUrl: `http://localhost:8000/`,
+    keywords: `Ichmaljan, Ikhmalian, Ихмальян, Fotografie, Photography, Фотография`,
   },
   plugins: [
     {
