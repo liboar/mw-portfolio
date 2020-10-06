@@ -15,7 +15,7 @@ module.exports = {
 
   siteMetadata: {
     title: `Ikhmalian Photography`,
-    description: `Portfolio website of Marianna Ikhmalian for analog photography`,
+    description: `I am Marianna Ikhmalian, I live in Moscow and this is the portfolio website for my analog photography. Check out my gallery, my store and follow me on Instagram.`,
     author: `B. Kawecki`,
     siteUrl: `http://localhost:8000/`,
     keywords: `Marianna Ichmaljan, Marianna Ikhmalian, Марианна Ихмальян, Fotografie, Photography, Фотография, Moskau, Moscow, Москва`,
