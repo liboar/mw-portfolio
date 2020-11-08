@@ -18,6 +18,7 @@
 
 .shopImage {
   border: 1rem #3a3a3a solid;
+  max-height: 400px;
 }
 
 .shopCard {
@@ -57,7 +58,4 @@
   p {
     font-size: 10pt;
   }
-}
-
-.shopFormSummaryInformation {
 }
