@@ -19,12 +19,7 @@ const ShopItem = props => {
     <div key={propKey}>
       <Card className="shopCard">
         <Col style={{ padding: "0" }}>
-          <Img
-            width="100%"
-            alt={description}
-            fluid={fluid}
-            className="shopImage"
-          />
+          <Img alt={description} fluid={fluid} className="shopImage" />
         </Col>
         <Col>
           <CardBody>
