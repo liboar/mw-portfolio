@@ -1,6 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import Img from "gatsby-image"
-import { Card, CardText, CardTitle, CardBody, Col } from "reactstrap"
+import {
+  Card,
+  CardText,
+  CardTitle,
+  CardBody,
+  Col,
+  Modal,
+  Button,
+} from "reactstrap"
 import ShopItemModal from "./shopItemModal"
 
 const ShopItem = props => {
@@ -15,12 +23,21 @@ const ShopItem = props => {
     fluid,
   } = props
 
+  const [modal, setModal] = useState(false)
+
+  const toggle = () => setModal(!modal)
+
   return (
     <div key={propKey}>
       <Card className="shopCard">
         <Col style={{ padding: "0" }}>
-          <Img alt={description} fluid={fluid} className="shopImage" />
+          <a onClick={toggle} style={{ cursor: "pointer" }}>
+            <Img alt={description} fluid={fluid} className="shopImage" />
+          </a>
         </Col>
+        <Modal isOpen={modal} toggle={toggle} className="modal-lg">
+          <Img alt={description} fluid={fluid} style={{ width: "100%" }} />
+        </Modal>
         <Col>
           <CardBody>
             <CardTitle
@@ -31,9 +48,7 @@ const ShopItem = props => {
             </CardTitle>
 
             <CardText>{material}</CardText>
-            {/* <CardText>
-              <label>{technique}</label>
-            </CardText> */}
+
             <CardText>
               {" "}
               <label> {price} &#8381;</label>
